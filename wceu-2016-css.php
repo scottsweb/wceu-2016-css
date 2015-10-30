@@ -34,6 +34,6 @@ define( 'WCEU_2016_FILE', __FILE__ );
  * @return void
  */
 function wceu_css_setup() {
-	wp_enqueue_style( 'wceu', WCEU_2016_CSS_URL . '/styles.css', array(), '1.0', 'screen' );
+	wp_enqueue_style( 'wceu', WCEU_2016_CSS_URL . '/styles.min.css', array(), '1.0', 'screen' );
 }
 add_action( 'wp_enqueue_scripts', 'wceu_css_setup' );

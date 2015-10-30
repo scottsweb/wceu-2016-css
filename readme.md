@@ -22,11 +22,13 @@ svn co https://meta.svn.wordpress.org/sites/trunk/wordcamp.org/public_html/wp-co
 
 This will download the `wp-content` folder to your local machine. You can then move the plugins and themes to a local WordPress installation.
 
-Next grab this plugin from GitHub and add it to your `wp-content/plugins/` directory. Activate your chosen theme (`wordcampe-baae-v2`) and this plugin via the WordPress admin.
+Next grab this plugin from GitHub and add it to your `wp-content/plugins/` directory. Activate your chosen theme (`wordcampe-base-v2`) and this plugin via the WordPress admin.
 
-Make sure you have `node` and `npm` [installed](https://nodejs.org/en/). Navigate to the plugin folder in your terminal app and type `npm install`. After a few minutes all the dependencies should be ready. You can then type `gulp` to start the build process and watch for changes.
+Make sure you have `node` and `npm` [installed](https://nodejs.org/en/). Navigate to the plugin folder in your terminal app and type `npm install`. After a few minutes all the dependencies should be ready. You can then type `gulp` to start the build process and watch for CSS changes.
 
-CSS generated from this plugin (`folder/css/`) needs to be copy and pasted into the `Appearance -> Edit CSS` screen on the live site.
+If your site is running on a local domain (e.g. `local.wp.dev`) then you can add this to line: 35 of `gulpfile.js`. Any CSS changes will then be automatically refreshed in your browser.
+
+CSS generated from this plugin (`css/styles.min.css`) needs to be manually copy and pasted into the `Appearance -> Edit CSS` screen on the live WordCamp site.
 
 ## Frequently Asked Questions
 
