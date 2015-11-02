@@ -7,7 +7,7 @@ body{
 }
 
 #main {
-	@include container(800px);
+	@include container( breakpoint('x-large') );
 }
 
 // theme classes
