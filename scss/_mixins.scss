@@ -1,0 +1,130 @@
+
+// breakpoints
+
+@function breakpoint($breakpoint-name) {
+	$breakpoint-value: map-get($breakpoints, $breakpoint-name);
+
+	@if $breakpoint-value {
+		@return $breakpoint-value;
+	}
+
+	@warn "Breakpoint '#{$breakpoint-name}' not found in $breakpoints";
+}
+
+@mixin respond-above($breakpoint-name) {
+	$breakpoint-value: breakpoint($breakpoint-name);
+
+	@if $breakpoint-value {
+		@media screen and (min-width: $breakpoint-value) {
+			@content;
+		}
+	}
+}
+
+// center align
+
+@mixin center-block() {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// clearfix
+
+@mixin clearfix() {
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+// image replacement
+
+@mixin text-hide() {
+	font: "0/0" a;
+	color: transparent;
+	text-shadow: none;
+	background-color: transparent;
+	border: 0;
+}
+
+// screen reader only
+
+@mixin sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0,0,0,0);
+	border: 0;
+}
+
+@mixin sr-only-focusable {
+	&:active,
+	&:focus {
+		position: static;
+		width: auto;
+		height: auto;
+		margin: 0;
+		overflow: visible;
+		clip: auto;
+	}
+}
+
+// text truncate
+
+@mixin text-truncate() {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+// font sizes
+
+@function text-breakpoints-for($text-size) {
+	$text-breakpoints: map-get($text-sizing, $text-size);
+
+	@if $text-breakpoints {
+		@return $text-breakpoints;
+	}
+
+	@warn "Text size '#{$text-size}' not found in $text-sizing";
+}
+
+@function text-properties-for($text-size, $breakpoint-name) {
+	$text-breakpoints: text-breakpoints-for($text-size);
+	$text-properties: map-get($text-breakpoints, $breakpoint-name);
+
+	@if $text-properties {
+		@return $text-properties;
+	}
+
+	@warn "Breakpoint '#{$breakpoint-name}' for text size '#{$text-size}' was not found";
+}
+
+@mixin text-size($text-size, $breakpoint-name: 'small') {
+	$text-size-properties: text-properties-for($text-size, $breakpoint-name);
+
+	@if $text-size-properties {
+		font-size: map-get($text-size-properties, 'font-size');
+		line-height: map-get($text-size-properties, 'line-height');
+	}
+}
+
+@mixin responsive-text-size($text-size, $default-breakpoint: 'small') {
+	@include text-size($text-size, $default-breakpoint);
+
+	$text-breakpoints-map: text-breakpoints-for($text-size);
+	$text-breakpoints-keys: map-keys($text-breakpoints-map);
+
+	@each $breakpoint-name in $text-breakpoints-keys {
+		@if $breakpoint-name != $default-breakpoint {
+			@include respond-above($breakpoint-name) {
+				@include text-size($text-size, $breakpoint-name);
+			}
+		}
+	}
+}

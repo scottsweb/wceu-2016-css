@@ -1,0 +1,13 @@
+body{
+	//@include container(80em);
+}
+
+#masthead {
+	//@include span(10%);
+}
+
+// theme classes
+
+.assistive-text {
+	@include sr-only();
+}

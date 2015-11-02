@@ -1,0 +1,63 @@
+
+// box sizing
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+// links
+
+a,
+a:visited {
+	color: $link-colour;
+	text-decoration: none;
+}
+
+a:hover,
+a:active {
+	color: $link-hover-colour;
+}
+
+// images
+
+a img {
+	border: none;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+// quotes
+
+blockquote, q {
+	quotes: "" "";
+
+	&:before,
+	&:after {
+		content: "";
+	}
+}
+
+// text selection
+
+::-moz-selection
+	{
+	background: darken($link-colour, 5%);
+	color: #fff;
+	text-shadow: none;
+	}
+
+::selection
+	{
+	background: darken($link-colour, 5%);
+	color: #fff;
+	text-shadow: none;
+	}
