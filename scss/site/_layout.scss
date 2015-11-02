@@ -6,6 +6,10 @@ body{
 	//@include span(10%);
 }
 
+#main {
+	@include container(800px);
+}
+
 // theme classes
 
 .assistive-text {

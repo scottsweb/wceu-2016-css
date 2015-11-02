@@ -1,0 +1,42 @@
+
+// header
+
+#masthead hgroup {
+	background: #ccc;
+	height: 260px;
+}
+
+.home {
+	height: 100%;
+
+	#page,
+	#masthead {
+		height: 100%;
+	}
+
+	#masthead hgroup {
+		height: 100%;
+	}
+
+}
+
+// site title
+
+.site-title {
+	margin: 0;
+	width: 350px;
+	height: 180px;
+	background: $link-colour;
+}
+
+// site description
+
+.site-description {
+	@include sr-only();
+}
+
+// #masthead
+
+#masthead {
+	margin-bottom: 30px;
+}
