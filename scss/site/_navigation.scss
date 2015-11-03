@@ -1,11 +1,19 @@
+.home .main-navigation {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
 .main-navigation {
 	@include clearfix();
 	background: darken( $grey, 15% );
 	height: 60px;
 	overflow: hidden;
+	font-family: 'Lato', sans-serif;
 
 	.menu {
 		@include container( breakpoint('large') );
+		@include responsive-text-size('deca');
 	}
 
 	ul {
@@ -52,6 +60,19 @@
 			left: auto;
 		}
 	}
+
+	> li {
+
+		&:before {
+			content: 'xx';
+			width: 7px;
+			height: 7px;
+			background: #fff;
+			position: relative;
+			left: -15px;
+		}
+	}
+
 	li {
 		float: left;
 		position: relative;
@@ -63,6 +84,8 @@
 	a {
 		display: block;
 		text-decoration: none;
+		color: #fff;
+		padding: 15px 15px;
 	}
 
 	.current_page_item > a,

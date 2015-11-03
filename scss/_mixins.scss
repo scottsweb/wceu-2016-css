@@ -1,4 +1,19 @@
 
+// buttons
+
+@mixin button() {
+	display: block;
+	border-radius: 30px;
+	background: $link-colour !important;
+	color: #fff !important;
+	padding: 7px 15px;
+
+	&:hover {
+		background: $link-hover-colour !important;
+		color: #fff !important;
+	}
+}
+
 // breakpoints
 
 @function breakpoint($breakpoint-name) {

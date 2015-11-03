@@ -1,6 +1,10 @@
 
 // header
 
+#masthead {
+	position: relative;
+}
+
 #masthead hgroup {
 	background: #ccc;
 	height: 260px;
@@ -14,13 +18,25 @@
 	#page,
 	#masthead {
 		height: 100%;
-		margin-bottom: 60px; // height of navigation
 	}
 
 	#masthead hgroup {
 		height: 100%;
 	}
 
+}
+
+// admin bar corrected
+
+.admin-bar.home {
+
+	#masthead {
+		height: calc(100% - 32px);
+
+		@media screen and ( max-width: 782px ) {
+			height: calc(100% - 46px);
+		}
+	}
 }
 
 // site title
@@ -38,8 +54,25 @@
 	@include sr-only();
 }
 
-// #masthead
+// header widgets
 
-#masthead {
-	margin-bottom: 30px;
+/*
+
+Add the following HTML to After Header & After Header homepage
+
+<div class="cta-widget">
+	<a href="#" class="button">Call to Action!</a>
+	<ul class="cta-second">
+		<li><a href="#">Call to Action!</a></li>
+		<li><a href="#">Call to Action!</a></li>
+		<li><a href="#">Call to Action!</a></li>
+	</ul>
+</div>
+
+ */
+
+.cta-widget {
+	position: absolute;
+	top: 100px;
+	right: 100px;
 }

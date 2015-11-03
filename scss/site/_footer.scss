@@ -4,8 +4,8 @@
 #colophon {
 	@include clearfix();
 	border-top: 1px solid $grey;
-	padding-top: 30px;
-	margin-top: 90px;
+	padding-top: gutter(12) * 2;
+	margin-top: gutter(12) * 2;
 }
 
 #footer-widgets {
@@ -13,6 +13,8 @@
 
 	.widget-title {
 		text-align: center;
+		margin-bottom: gutter(12) * 3;
+		margin-top: 0;
 	}
 }
 
@@ -164,7 +166,7 @@ Add a custom menu to Footer Widget Area 3
 		border-radius: 50%;
 		margin: 0 auto;
 		background: $link-colour;
-		text-indent: -999999px;
+		text-indent: -99999px;
 		margin-bottom: gutter(12);
 		position: relative;
 

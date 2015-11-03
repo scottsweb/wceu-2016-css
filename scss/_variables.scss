@@ -3,7 +3,7 @@
 
 $grey: #cccccc;
 
-$body-font-colour: #000;
+$body-font-colour: #383838;
 
 $link-colour: #8E0000;
 $link-hover-colour: #000;
@@ -34,12 +34,16 @@ $text-sizing: (
 	),
 	'base': (
 		'small': (
-			'font-size': 16px,
+			'font-size': 17px,
 			'line-height': 26px
 		),
 		'large': (
 			'font-size': 18px,
 			'line-height': 32px
+		),
+		'x-large': (
+			'font-size': 19px,
+			'line-height': 33px
 		)
 	),
 	'deca': (
@@ -78,8 +82,8 @@ $text-sizing: (
 			'line-height': 35px
 		),
 		'large': (
-			'font-size': 40px,
-			'line-height': 48px
+			'font-size': 36px,
+			'line-height': 44px
 		)
 	)
 );
