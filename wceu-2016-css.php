@@ -48,4 +48,4 @@ function wceu_kit() {
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 	<?php
 }
-add_action( 'wp_head', 'wceu_kit' );
+//add_action( 'wp_head', 'wceu_kit' );

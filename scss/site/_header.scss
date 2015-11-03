@@ -6,12 +6,15 @@
 	height: 260px;
 }
 
+// make it large on home
+
 .home {
 	height: 100%;
 
 	#page,
 	#masthead {
 		height: 100%;
+		margin-bottom: 60px; // height of navigation
 	}
 
 	#masthead hgroup {

@@ -1,8 +1,12 @@
 .main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
+	@include clearfix();
+	background: darken( $grey, 15% );
+	height: 60px;
+	overflow: hidden;
+
+	.menu {
+		@include container( breakpoint('large') );
+	}
 
 	ul {
 		display: none;

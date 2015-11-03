@@ -21,7 +21,8 @@ a:visited {
 }
 
 a:hover,
-a:active {
+a:active,
+a:visited:hover {
 	color: $link-hover-colour;
 }
 
@@ -46,6 +47,8 @@ blockquote, q {
 		content: "";
 	}
 }
+
+// forms
 
 // text selection
 

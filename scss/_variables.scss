@@ -5,7 +5,7 @@ $grey: #cccccc;
 
 $body-font-colour: #000;
 
-$link-colour: red;
+$link-colour: #8E0000;
 $link-hover-colour: #000;
 
 // responsive breakpints
@@ -39,7 +39,7 @@ $text-sizing: (
 		),
 		'large': (
 			'font-size': 18px,
-			'line-height': 28px
+			'line-height': 32px
 		)
 	),
 	'deca': (
@@ -74,12 +74,12 @@ $text-sizing: (
 	),
 	'mega': (
 		'small': (
-			'font-size': 36px,
-			'line-height': 48px
+			'font-size': 30px,
+			'line-height': 35px
 		),
 		'large': (
 			'font-size': 40px,
-			'line-height': 60px
+			'line-height': 48px
 		)
 	)
 );
@@ -99,7 +99,7 @@ $susy: (
 	global-box-sizing: border-box,
 	last-flow: to,
 	debug: (
-		image: show,
+		image: hide,
 		color: rgba(#ccc, 1),
 		output: background,
 		toggle: top right,

@@ -152,4 +152,31 @@ Add a custom menu to Footer Widget Area 3
 
 .site-info {
 	@include container( breakpoint('large') );
+
+	.site-info-generator {
+		@include sr-only();
+	}
+
+	.site-info-network {
+		display: block;
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		margin: 0 auto;
+		background: $link-colour;
+		text-indent: -999999px;
+		margin-bottom: gutter(12);
+		position: relative;
+
+		&:after {
+			content: '';
+			display: block;
+			width: 30px;
+			height: 100px;
+			background: $link-colour;
+			position: absolute;
+			left: 50%;
+			margin-left: -15px;
+		}
+	}
 }
