@@ -1,0 +1,155 @@
+
+// footer
+
+#colophon {
+	@include clearfix();
+	border-top: 1px solid $grey;
+	padding-top: 30px;
+	margin-top: 90px;
+}
+
+#footer-widgets {
+	@include container( breakpoint('large') );
+
+	.widget-title {
+		text-align: center;
+	}
+}
+
+.footer-widgets-block {
+	margin-bottom: gutter(12);
+}
+
+/*
+
+Add the following HTML to Footer Widget Area 1
+Logos will be add via CSS as SVG - each list item will need its own class
+
+<ul class="sponsors level1">
+	<li><a href="#">Sponsor</a></li>
+	<li><a href="#">Sponsor</a></li>
+	<li><a href="#">Sponsor</a></li>
+</ul>
+
+<ul class="sponsors level2">
+	<li><a href="#">Sponsor</a></li>
+	<li><a href="#">Sponsor</a></li>
+	<li><a href="#">Sponsor</a></li>
+	<li><a href="#">Sponsor</a></li>
+	<li><a href="#">Sponsor</a></li>
+	<li><a href="#">Sponsor</a></li>
+	<li><a href="#">Sponsor</a></li>
+	<li><a href="#">Sponsor</a></li>
+</ul>
+
+*/
+
+#footer-widgets .sponsors {
+	@include clearfix();
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	li {
+		height: 100px;
+		text-align: center;
+		background: $grey;
+		margin-bottom: gutter(12);
+
+		a {
+			display: block;
+			height: 100%;
+		}
+	}
+
+	&.level1 li {
+		@include respond-above( 'small' ) {
+			@include gallery(4 of 12);
+		}
+	}
+
+	&.level2 li {
+		@include gallery(6 of 12);
+
+		@include respond-above( 'small' ) {
+			@include gallery(6 of 12);
+		}
+
+		@include respond-above( 'medium' ) {
+			@include gallery(3 of 12);
+		}
+	}
+}
+
+/*
+
+Add the following HTML to Footer Widget Area 2
+This will form a list of social media buttons for WCEU
+
+<ul class="social-media">
+	<li class="twitter"><a href="#">Twitter</a></li>
+	<li class="facebook"><a href="#">Facebook</a></li>
+	<li class="email"><a href="#">Email</a></li>
+</ul>
+
+*/
+
+#footer-widgets .social-media {
+	@include clearfix();
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+
+	li {
+		display: inline-block;
+		height: 60px;
+		width: 60px;
+		background: $grey;
+		border-radius: 50%;
+		margin-right: gutter(12);
+		margin-bottom: gutter(12);
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		a {
+			@include text-hide();
+			display: block;
+			height: 100%;
+		}
+	}
+}
+
+/*
+
+Add a custom menu to Footer Widget Area 3
+
+*/
+
+#footer-widgets .widget_nav_menu {
+	ul {
+		@include clearfix();
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		padding-bottom: gutter(12);
+
+		li {
+			display: inline;
+			margin-right: gutter(12);
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+// site info / credits
+
+.site-info {
+	@include container( breakpoint('large') );
+}

@@ -1,6 +1,8 @@
 
 // colours
 
+$grey: #cccccc;
+
 $body-font-colour: #000;
 
 $link-colour: red;
@@ -79,6 +81,35 @@ $text-sizing: (
 			'font-size': 40px,
 			'line-height': 60px
 		)
+	)
+);
+
+// layout
+
+$susy: (
+	flow: ltr,
+	math: fluid,
+	output: float,
+	gutter-position: after,
+	container: auto,
+	container-position: center,
+	columns: 12,
+	gutters: .5,
+	column-width: false,
+	global-box-sizing: border-box,
+	last-flow: to,
+	debug: (
+		image: show,
+		color: rgba(#ccc, 1),
+		output: background,
+		toggle: top right,
+	),
+	use-custom: (
+		background-image: true,
+		background-options: false,
+		box-sizing: true,
+		clearfix: false,
+		rem: true,
 	)
 );
 

@@ -1,3 +1,5 @@
+@include layout( $susy );
+
 body{
 	//@include container(80em);
 }
@@ -7,7 +9,7 @@ body{
 }
 
 #main {
-	@include container( breakpoint('x-large') );
+	@include container( breakpoint('large') );
 }
 
 // theme classes
