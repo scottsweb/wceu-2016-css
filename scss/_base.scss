@@ -37,6 +37,13 @@ img {
 	max-width: 100%;
 }
 
+// lists
+
+ul,
+ol {
+	margin-left: gutter(12);
+}
+
 // quotes
 
 blockquote, q {
@@ -45,6 +52,31 @@ blockquote, q {
 	&:before,
 	&:after {
 		content: "";
+	}
+}
+
+blockquote {
+	font-style: italic;
+	font-weight: 400;
+	position: relative;
+	margin: 0 0 0 gutter(12);
+
+	&:before {
+		font-size: 80px;
+		content: '“';
+		display: block;
+		font-family: 'Lobster', cursive;
+		position: absolute;
+		left: -45px;
+		top: 17px;
+		font-style: normal;
+		color: $grey;
+
+		@include respond-above( 'large' ) {
+			//left: -90px;
+			//top: 64px;
+			//font-size: 180px
+		}
 	}
 }
 

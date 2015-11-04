@@ -73,10 +73,6 @@ Logos will be add via CSS as SVG - each list item will need its own class
 	&.level2 li {
 		@include gallery(6 of 12);
 
-		@include respond-above( 'small' ) {
-			@include gallery(6 of 12);
-		}
-
 		@include respond-above( 'medium' ) {
 			@include gallery(3 of 12);
 		}

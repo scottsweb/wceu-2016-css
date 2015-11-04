@@ -66,6 +66,20 @@
 
 }
 
+.sharedaddy {
+	margin: ( gutter(12) * 2 ) 0;
+
+
+	h3 {
+		@include sr-only();
+	}
+
+	.sd-content {
+		text-align: center;
+		margin: 0 auto;
+	}
+}
+
 // post archive
 
 .blog .post {
