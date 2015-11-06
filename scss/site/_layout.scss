@@ -18,6 +18,10 @@
 	}
 }
 
+.button {
+	@include button();
+}
+
 // wrap the main content in a container to match large breakpoint
 
 #main {

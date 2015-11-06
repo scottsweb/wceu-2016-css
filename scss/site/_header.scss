@@ -43,9 +43,6 @@
 
 .site-title {
 	margin: 0;
-	width: 350px;
-	height: 180px;
-	background: $link-colour;
 }
 
 // site description
@@ -72,7 +69,24 @@ Add the following HTML to After Header & After Header homepage
  */
 
 .cta-widget {
+	text-align: center;
 	position: absolute;
 	top: 100px;
 	right: 100px;
+
+	.button {
+		display: inline-block;
+		margin-bottom: gutter(12) * 2;
+	}
+}
+
+.cta-second {
+	@include responsive-text-size('centi');
+	margin: 0;
+	padding: 0;
+
+	li {
+		display: inline;
+		margin: 0 5px;
+	}
 }
