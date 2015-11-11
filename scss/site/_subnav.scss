@@ -1,0 +1,25 @@
+#after-header-widgets {
+	font-family: 'Lato', sans-serif;
+	.widget {
+		background-color: darken( $grey, 30% );
+		&-title {
+			display: none;
+		}
+	}
+	.menu {
+		list-style-type: none;
+		margin: 0;
+		padding: 0 15px;
+		@include container( breakpoint('large') );
+		@include responsive-text-size('deca');
+	}
+	li {
+		float: left;
+	}
+	a {
+		display: block;
+		text-decoration: none;
+		color: #fff;
+		padding: 15px 15px;
+	}
+}
