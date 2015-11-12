@@ -1,12 +1,18 @@
 
 // colours
 
+$red: #8C2336;
+$offwhite: #FFECD0;
+$green: #B2B27F;
+$blue: #2F3436;
+$gold: #FFBE46;
+
 $grey: #cccccc;
 
-$body-font-colour: #383838;
+$body-font-colour: $blue;
 
-$link-colour: #8E0000;
-$link-hover-colour: #000;
+$link-colour: $red;
+$link-hover-colour: $green;
 
 // responsive breakpints
 
