@@ -5,7 +5,7 @@
 	border: 1px solid $grey;
 	border-radius: 3px;
 	background-color: lighten( $grey, 15% );
-	
+
 	.comment-reply-title {
 		margin-top: 0;
 	}
@@ -31,7 +31,6 @@
 		}
 	}
 	input[type=submit] {
-		@include button();
 		border: none;
 		@include respond-above(small) {
 			margin-left: 7em;
@@ -120,7 +119,7 @@
 		}
 	}
 	&-content {
-		
+
 		padding-left: 46px;
 		font-size: .8823529412em;
 		line-height: 1.4;

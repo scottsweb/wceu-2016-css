@@ -3,7 +3,7 @@
 
 #colophon {
 	@include clearfix();
-	border-top: 1px solid $grey;
+	border-top: 1px solid $offwhite;
 	padding-top: gutter(12) * 2;
 	margin-top: gutter(12) * 2;
 }
@@ -94,7 +94,7 @@ Logos will be add via CSS as SVG - each list item will need its own class
 	li {
 		height: 100px;
 		text-align: center;
-		background: $grey;
+		background: $offwhite;
 		margin-bottom: gutter(12);
 
 		a {
@@ -122,6 +122,7 @@ Logos will be add via CSS as SVG - each list item will need its own class
 	}
 
 	&.level3 li {
+		height: 60px;
 		@include gallery(4 of 12);
 
 		@include respond-above( 'medium' ) {
@@ -138,8 +139,13 @@ Logos will be add via CSS as SVG - each list item will need its own class
 		@include respond-above( 'medium' ) {
 			@include gallery(2 of 12);
 		}
-	}
 
+		@include responsive-text-size('centi');
+
+		@include respond-above( 'small' ) {
+			@include responsive-text-size('deci');
+		}
+	}
 }
 
 /*
@@ -149,8 +155,8 @@ This will form a list of social media buttons for WCEU
 
 <ul class="social-media">
 	<li class="twitter"><a href="#">Twitter</a></li>
-	<li class="facebook"><a href="#">Facebook</a></li>
 	<li class="email"><a href="#">Email</a></li>
+	<li class="facebook"><a href="#">Facebook</a></li>
 </ul>
 
 */
@@ -166,8 +172,6 @@ This will form a list of social media buttons for WCEU
 		display: inline-block;
 		height: 60px;
 		width: 60px;
-		background: $grey;
-		border-radius: 50%;
 		margin-right: gutter(12);
 		margin-bottom: gutter(12);
 
@@ -179,6 +183,57 @@ This will form a list of social media buttons for WCEU
 			@include text-hide();
 			display: block;
 			height: 100%;
+			position: relative;
+			border-radius: 50%;
+
+			&:before {
+				display: inline-block;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				font: normal 16px/1 'Genericons';
+				vertical-align: top;
+				position: relative;
+				top: 0px;
+				text-align: center;
+				color: #fff;
+				font-size: 28px;
+				line-height: 60px;
+			}
+
+			&:hover{
+				opacity: .6;
+			}
+		}
+	}
+
+	.twitter {
+		a {
+			background-color: #00acee;
+		}
+
+		a:before {
+			content: '\f202';
+		}
+	}
+
+	.facebook {
+		a {
+			background-color: #3b5998;
+		}
+
+		a:before {
+			content: '\f204';
+		}
+	}
+
+	.email {
+		a {
+			background-color: #e9e9e9;
+		}
+
+		a:before {
+			content: '\f410';
+			color: #777;
 		}
 	}
 }
@@ -224,10 +279,16 @@ Add a custom menu to Footer Widget Area 3
 		height: 60px;
 		border-radius: 50%;
 		margin: 0 auto;
-		background: $link-colour;
+		background-color: $link-colour;
 		text-indent: -99999px;
 		margin-bottom: gutter(12);
 		position: relative;
+		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 189 189"><style type="text/css">.logo-wordpress{fill:#fff;}</style><path class="logo-wordpress" d="M94.5 0C42.4 0 0 42.4 0 94.5S42.4 189 94.5 189 189 146.6 189 94.5 146.6 0 94.5 0zm-85 94.5c0-12.3 2.6-24 7.4-34.6l40.5 111C29.1 157.2 9.5 128.1 9.5 94.5zm85 85c-8.3 0-16.4-1.2-24-3.5L96 101.9l26.1 71.5.6 1.2c-8.8 3.2-18.3 4.9-28.2 4.9zm11.7-124.8c5.1-.3 9.7-.8 9.7-.8 4.6-.5 4-7.3-.5-7 0 0-13.8 1.1-22.6 1.1-8.3 0-22.4-1.1-22.4-1.1-4.6-.3-5.1 6.7-.5 7 0 0 4.3.5 8.9.8L92 90.9l-18.6 55.8-30.9-92c5.1-.3 9.7-.8 9.7-.8 4.6-.5 4-7.3-.5-7 0 0-13.8 1.1-22.6 1.1-1.6 0-3.5 0-5.5-.1 15.2-23.1 41.3-38.3 71-38.3 22.1 0 42.3 8.5 57.4 22.3-.4 0-.7-.1-1.1-.1-8.3 0-14.3 7.3-14.3 15.1 0 7 4 12.9 8.3 19.9 3.2 5.7 7 12.9 7 23.4 0 7.3-2.8 15.7-6.5 27.5l-8.5 28.3-30.7-91.3zm62.9-1c6.6 12.1 10.4 26 10.4 40.8 0 31.3-17 58.7-42.2 73.4l26-75c4.8-12.1 6.5-21.8 6.5-30.4-.2-3.2-.4-6.1-.7-8.8z"/></svg>');
+		background-position: center;
+		background-repeat: no-repeat;
+		color: #fff;
+		position: relative;
+		background-size: 40px;
 
 		&:after {
 			content: '';
@@ -238,6 +299,15 @@ Add a custom menu to Footer Widget Area 3
 			position: absolute;
 			left: 50%;
 			margin-left: -15px;
+			z-index: -1;
+		}
+
+		&:hover {
+			background-color: $green;
+
+			&:after {
+				background-color: $green;
+			}
 		}
 	}
 }

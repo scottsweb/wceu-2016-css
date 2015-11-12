@@ -96,6 +96,19 @@ iframe {
 
 // forms
 
+input[type=submit] {
+	@include button();
+}
+
+// hr
+
+hr {
+	height: 1px;
+	background: $offwhite;
+	border: none;
+	margin: 30px 0;
+}
+
 // text selection
 
 ::-moz-selection

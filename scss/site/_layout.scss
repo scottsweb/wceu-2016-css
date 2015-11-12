@@ -22,7 +22,13 @@
 	@include button();
 }
 
-// body colour
+// html
+
+html {
+
+}
+
+// body
 
 body {
 	//background: fade-out($offwhite, .5);
@@ -62,11 +68,11 @@ body {
 		color: $grey;
 
 		a {
-			color: fade-out( $link-colour, 0.5 );
+			color: $green;
 		}
 
 		a:hover {
-			color: $link-hover-colour;
+			color: $blue;
 		}
 	}
 
@@ -74,11 +80,19 @@ body {
 		margin-bottom: gutter(12);
 	}
 
+	.button {
+		max-width: 350px;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	img {
+		display: block;
+	}
 }
 
 .sharedaddy {
 	margin: ( gutter(12) * 2 ) 0;
-
 
 	h3 {
 		@include sr-only();
@@ -90,12 +104,16 @@ body {
 	}
 }
 
+#nav-below {
+	display: none;
+}
+
 // post archive
 
 .blog .post {
 	margin-bottom: gutter(12) * 3;
 	padding-bottom: gutter(12) * 3;
-	border-bottom: 1px solid $grey;
+	border-bottom: 1px solid $offwhite;
 
 	footer.entry-meta {
 		display: none;
@@ -143,4 +161,28 @@ body {
 		position: relative;
 		top: -60px;
 	}
+}
+
+// social media stream
+
+.tggr-actions a:hover,
+.tggr-media-item a:hover {
+	text-decoration: none;
+	border: none;
+}
+
+.tggr-author-name {
+	color: $blue;
+}
+
+.tggr-media-item {
+	border-color: $blue;
+}
+
+.tggr-author-username {
+	color: $green;
+}
+
+.tggr-timestamp {
+	@include responsive-text-size('centi');
 }

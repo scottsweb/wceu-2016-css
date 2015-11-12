@@ -2,16 +2,21 @@
 // buttons
 
 @mixin button() {
-	display: block;
+	display: inline-block;
 	border-radius: 30px;
 	background: $link-colour !important;
 	color: #fff !important;
 	padding: 7px 15px;
 	text-align: center;
+	border: none;
 
 	&:hover {
 		background: $link-hover-colour !important;
 		color: #fff !important;
+	}
+
+	@include respond-above( 'small' ) {
+		padding: 15px 30px;
 	}
 }
 
