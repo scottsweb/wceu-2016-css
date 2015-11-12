@@ -6,7 +6,7 @@
 
 .main-navigation {
 	@include clearfix();
-	background: darken( $grey, 15% );
+	background: $green;
 	height: 60px;
 	overflow: hidden;
 	font-family: 'Lato', sans-serif;
@@ -51,7 +51,8 @@
 			}
 
 			a:hover,
-			a.focus {
+			a:focus {
+				color: $red;
 			}
 		}
 
@@ -88,11 +89,17 @@
 		padding: 15px 15px;
 	}
 
+	a:hover,
+	a:focus {
+		color: $blue;
+	}
+
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
-		background-color: darken( $grey, 30% );
+		background-color: $blue;
+		color: #fff;
 	}
 }
 

@@ -27,23 +27,62 @@
 Add the following HTML to Footer Widget Area 1
 Logos will be add via CSS as SVG - each list item will need its own class
 
-<ul class="sponsors level1">
-	<li><a href="#">Sponsor</a></li>
-	<li><a href="#">Sponsor</a></li>
-	<li><a href="#">Sponsor</a></li>
+<!-- super admin -->
+
+<ul class="sponsors level0">
+	<li class="sponsor-jetpack"><a href="http://jetpack.com">Jetpack</a></li>
 </ul>
+
+<!-- administrator -->
+
+<ul class="sponsors level1">
+	<li class="sponsor-yoast"><a href="https://yoast.com/">Yoast</a></li>
+	<li class="sponsor-sitelock"><a href="https://www.sitelock.com/">Sitelock</a></li>
+	<li class="sponsor-godaddy"><a href="https://godaddy.com">GoDaddy</a></li>
+</ul>
+
+<!-- editor -->
 
 <ul class="sponsors level2">
-	<li><a href="#">Sponsor</a></li>
-	<li><a href="#">Sponsor</a></li>
-	<li><a href="#">Sponsor</a></li>
-	<li><a href="#">Sponsor</a></li>
-	<li><a href="#">Sponsor</a></li>
-	<li><a href="#">Sponsor</a></li>
-	<li><a href="#">Sponsor</a></li>
-	<li><a href="#">Sponsor</a></li>
+	<li class="sponsor-woocommerce"><a href="http://www.woothemes.com/woocommerce/">WooCommerce</a></li>
+	<li class="sponsor-sucuri"><a href="https://sucuri.net/">Sucuri</a></li>
+	<li class="sponsor-wpengine"><a href="https://wpengine.com/">WP Engine</a></li>
+	<li class="no-sponsor"><a href="#">Sponsor</a></li>
 </ul>
 
+<!-- subscriber & author -->
+
+<ul class="sponsors level3">
+	<li class="sponsor-managewp"><a href="https://managewp.com/">Manage WP</a></li>
+	<li class="sponsor-dreamhost"><a href="https://www.dreamhost.com/">Dreamhost</a></li>
+	<li class="sponsor-pragmatic"><a href="https://www.pragmatic-web.co.uk/">Pragmatic</a></li>
+	<li class="sponsor-inpsyde"><a href="http://inpsyde.com/en/">Inpsyde</a></li>
+	<li class="no-sponsor"><a href="#">Sponsor</a></li>
+	<li class="no-sponsor"><a href="#">Sponsor</a></li>
+	<li class="no-sponsor"><a href="#">Sponsor</a></li>
+	<li class="sponsor-ithemes"><a href="https://ithemes.com/">iThemes</a></li>
+	<li class="sponsor-codeable"><a href="https://codeable.io/">Codeable</a></li>
+	<li class="sponsor-meregistry"><a href="#">ME Registry</a></li>
+	<li class="no-sponsor"><a href="#">Sponsor</a></li>
+	<li class="no-sponsor"><a href="#">Sponsor</a></li>
+</ul>
+
+<!-- small business -->
+
+<ul class="sponsors level4">
+	<li class="sponsor-savvii"><a href="https://www.savvii.eu/">Savvii</a></li>
+	<li class="sponsort-deliciousbrains"><a href="https://deliciousbrains.com/">Delicious Brains</a></li>
+	<li class="sponsor-mensmaximus"><a href="https://mensmaximus.de/">mensmaximus</a></li>
+	<li class="no-sponsor"><a href="#">Sponsor</a></li>
+	<li class="no-sponsor"><a href="#">Sponsor</a></li>
+	<li class="no-sponsor"><a href="#">Sponsor</a></li>
+	<li class="no-sponsor"><a href="#">Sponsor</a></li>
+	<li class="no-sponsor"><a href="#">Sponsor</a></li>
+	<li class="no-sponsor"><a href="#">Sponsor</a></li>
+	<li class="no-sponsor"><a href="#">Sponsor</a></li>
+	<li class="no-sponsor"><a href="#">Sponsor</a></li>
+	<li class="no-sponsor"><a href="#">Sponsor</a></li>
+</ul>
 */
 
 #footer-widgets .sponsors {
@@ -64,6 +103,10 @@ Logos will be add via CSS as SVG - each list item will need its own class
 		}
 	}
 
+	&.level0 li {
+		@include gallery(12 of 12);
+	}
+
 	&.level1 li {
 		@include respond-above( 'small' ) {
 			@include gallery(4 of 12);
@@ -77,6 +120,26 @@ Logos will be add via CSS as SVG - each list item will need its own class
 			@include gallery(3 of 12);
 		}
 	}
+
+	&.level3 li {
+		@include gallery(4 of 12);
+
+		@include respond-above( 'medium' ) {
+			@include gallery(2 of 12);
+		}
+	}
+
+	&.level4 li {
+		height: auto;
+		background: none;
+
+		@include gallery(4 of 12);
+
+		@include respond-above( 'medium' ) {
+			@include gallery(2 of 12);
+		}
+	}
+
 }
 
 /*
