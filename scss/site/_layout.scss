@@ -88,7 +88,11 @@ body {
 	}
 
 	img {
-		display: block;
+		transition: all 0.3s ease-in-out;
+
+		&:hover {
+			filter: saturate(200%);
+		}
 	}
 }
 
@@ -164,6 +168,14 @@ body.page {
 	.entry-title {
 		margin-bottom: gutter(12) * 3;
 		text-align: center;
+	}
+
+	img {
+		transition: all 0.3s ease-in-out;
+
+		&:hover {
+			filter: saturate(200%);
+		}
 	}
 }
 
@@ -261,6 +273,31 @@ body.page {
 
 .tix-ticket-excerpt {
 	@include responsive-text-size('deci');
+}
+
+.tix-right input[type=email],
+.tix-right input[type=text] {
+	width: 100%;
+}
+
+.tix_tickets_table th[colspan='2'] {
+	padding: 15px;
+}
+
+.tix_tickets_table td {
+	vertical-align: middle;
+}
+
+.tix-required-star {
+	color: $red;
+}
+
+.tix-order-summary {
+	margin-bottom: gutter(12)*2;
+}
+
+select[name='tix_payment_method'] {
+	@include sr-only;
 }
 
 .tix-row-coupon {

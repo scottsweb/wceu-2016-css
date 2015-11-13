@@ -59,6 +59,7 @@ blockquote {
 	font-weight: 400;
 	position: relative;
 	margin: 0 0 0 ( gutter(12) * 2 );
+	@include responsive-text-size('deca');
 
 	p {
 		margin: 2em 0;

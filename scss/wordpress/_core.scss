@@ -65,11 +65,12 @@ a img.aligncenter {
 	.wp-caption-text {
 		@include responsive-text-size('deci');
 		border-radius: 30px;
-		background: $offwhite;
+		background: $gold;
 		display: block;
 		width: auto;
 		padding: 7px 15px;
 		font-style: italic;
+		color: #fff;
 
 		@include respond-above( 'small' ) {
 			padding: 11px 30px;

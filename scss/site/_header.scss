@@ -84,6 +84,7 @@ Add the following HTML to After Header & After Header homepage
 	@include responsive-text-size('centi');
 	margin: 0;
 	padding: 0;
+	display: none; // for now
 
 	li {
 		display: inline;
