@@ -16,7 +16,7 @@
 	}
 
 	@include respond-above( 'small' ) {
-		padding: 15px 30px;
+		padding: 11px 30px;
 	}
 }
 
@@ -57,6 +57,27 @@
 		content: "";
 		display: table;
 		clear: both;
+	}
+}
+
+// images
+
+@mixin img-fluid($display: block) {
+	display: $display;
+	max-width: 100%;
+	height: auto;
+}
+
+// Retina image
+
+@mixin img-retina($file-1x, $file-2x, $width-1x, $height-1x) {
+	background-image: url($file-1x);
+	// Compatibility info: http://caniuse.com/#feat=css-media-resolution
+	@media
+	only screen and (min-resolution: 192dpi),
+	only screen and (min-resolution: 2dppx) {
+		background-image: url($file-2x);
+		background-size: $width-1x $height-1x;
 	}
 }
 

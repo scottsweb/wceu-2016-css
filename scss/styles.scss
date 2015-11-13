@@ -8,9 +8,10 @@ Do not modify this CSS on WordCamp.org. It is being built from: https://github.c
 @import "variables";
 @import "mixins";
 
+@import "susy/susy";
+@include layout( $susy );
 @import "base";
 @import "typography";
-@import "susy/susy";
 
 @import "wordpress/core";
 @import "wordpress/shortcodes";

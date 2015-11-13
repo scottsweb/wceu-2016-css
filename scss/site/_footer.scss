@@ -167,13 +167,14 @@ This will form a list of social media buttons for WCEU
 	margin: 0;
 	padding: 0;
 	text-align: center;
+	margin-top: gutter(12)*2;
 
 	li {
 		display: inline-block;
 		height: 60px;
 		width: 60px;
 		margin-right: gutter(12);
-		margin-bottom: gutter(12);
+		margin-bottom: gutter(12)*2;
 
 		&:last-child {
 			margin-right: 0;

@@ -1,92 +1,30 @@
-.home .main-navigation {
+// absolute position for home
+
+.home .main-navigation,
+.home .main-small-navigation {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
 }
 
-.main-navigation {
+.home .main-small-navigation {
+	top: 0;
+	bottom: auto;
+	z-index: 100;
+}
+
+// shared
+
+.main-navigation,
+.main-small-navigation {
 	@include clearfix();
 	background: $green;
-	height: 60px;
-	overflow: hidden;
 	font-family: 'Lato', sans-serif;
 
-	.menu {
-		@include container( breakpoint('large') );
-		@include responsive-text-size('deca');
-	}
-
-	ul {
-		display: none;
-		list-style: none;
-		margin: 0;
-		padding-left: 0;
-
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 1.5em;
-			left: -999em;
-			z-index: 99999;
-
-			ul {
-				left: -999em;
-				top: 0;
-			}
-
-			li {
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
-				}
-			}
-
-			a {
-				width: 200px;
-			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a:focus {
-				color: $red;
-			}
-		}
-
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
-	}
-
-	> li {
-
-		&:before {
-			content: 'xx';
-			width: 7px;
-			height: 7px;
-			background: #fff;
-			position: relative;
-			left: -15px;
-		}
-	}
-
-	li {
-		float: left;
-		position: relative;
-
-		&:hover > a,
-		&.focus > a {
-		}
-	}
 	a {
 		display: block;
 		text-decoration: none;
 		color: #fff;
-		padding: 15px 15px;
 	}
 
 	a:hover,
@@ -103,18 +41,93 @@
 	}
 }
 
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
+// mobile navigation
+
+.main-small-navigation {
+
+	.menu-toggle {
+		@include responsive-text-size('deca');
+		margin: 0;
+		padding: 0;
+		cursor: pointer;
+		text-align: center;
+		color: #fff;
+		letter-spacing: normal;
+		padding: 15px 0;
+
+		&.toggled-on {
+			background: $red;
+		}
+	}
+
+	.menu {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: none;
+
+		li {
+
+			a {
+				padding: 7px 15px;
+			}
+
+		}
+	}
 }
 
-@include respond-above(small) {
-//@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
+// desktop navigation
+
+.main-navigation {
+	height: 60px;
+	overflow: hidden;
+
+	.assistive-text {
+		@include sr-only();
 	}
-	.main-navigation ul {
+
+
+	// caution - this class changes with the menu name
+	.menu-main-menu-container {
+		//@include container( breakpoint('large') );
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+	}
+
+	.menu {
+		@include responsive-text-size('deca');
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: table-row;
+
+		> li {
+			display: table-cell;
+			text-align: center;
+		}
+
+	}
+
+	a {
 		display: block;
+		text-decoration: none;
+		color: #fff;
+		padding: 15px 0;
+	}
+
+	a:hover,
+	a:focus {
+		color: $blue;
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+		background-color: $blue;
+		color: #fff;
 	}
 }
+

@@ -75,8 +75,8 @@ Add the following HTML to After Header & After Header homepage
 	right: 100px;
 
 	.button {
-		display: inline-block;
-		margin-bottom: gutter(12) * 2;
+		display: inline-block !important;
+		margin-bottom: gutter(12);
 	}
 }
 
@@ -87,6 +87,6 @@ Add the following HTML to After Header & After Header homepage
 
 	li {
 		display: inline;
-		margin: 0 5px;
+		margin: 0 0;
 	}
 }
