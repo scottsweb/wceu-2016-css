@@ -91,8 +91,11 @@
 	.menu-main-menu-container {
 		//@include container( breakpoint('large') );
 		display: table;
-		table-layout: fixed;
 		width: 100%;
+
+		@include respond-above( 'x-large' ) {
+			table-layout: fixed;
+		}
 	}
 
 	.menu {
@@ -114,7 +117,11 @@
 		display: block;
 		text-decoration: none;
 		color: #fff;
-		padding: 15px 0;
+		padding: 17px 7px;
+
+		@include respond-above( 'large' ) {
+			padding: 15px 7px;
+		}
 	}
 
 	a:hover,

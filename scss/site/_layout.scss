@@ -255,6 +255,14 @@ body.page {
 	@include responsive-text-size('centi');
 }
 
+#tggr-loading-new-posts {
+	color: #fff;
+
+	img {
+		margin: 0 auto;
+	}
+}
+
 // tickets
 
 .tix-notice {
