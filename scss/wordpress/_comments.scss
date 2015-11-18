@@ -1,22 +1,42 @@
 #comments {
-	display: none;
+	border-top: 1px solid $offwhite;
+	padding-top: gutter(12)*2;
+}
+.comments-title {
+	@include sr-only();
 }
 
 #respond {
-	margin-top: 2em;
-	margin-bottom: 2em;
-	padding: 1em;
-	border: 1px solid $grey;
-	border-radius: 3px;
-	background-color: lighten( $grey, 15% );
+	margin: 0 auto;
+	background: $offwhite;
+	max-width: 600px;
+	padding: 30px;
+	border-radius: 30px;
+	position: relative;
 
-	.comment-reply-title {
-		margin-top: 0;
+	&:before {
+		@include triangle(top, $offwhite, 20px);
+		display: block;
+		position: absolute;
+		top: -20px;
+		left: 50%;
+		margin-left: -10px;
 	}
-	.children & {
-		background-color: white;
-		margin-top: 0;
+
+	.comment-notes {
+		@include sr-only();
 	}
+
+	#reply-title {
+		@include responsive-text-size('deca');
+		margin-top: 0;
+
+		#cancel-comment-reply-link {
+			@include responsive-text-size('base');
+			float: right;
+		}
+	}
+
 }
 
 .comment-form {
@@ -26,110 +46,87 @@
 	label {
 		display: block;
 		font-weight: bold;
-		@include respond-above(small) {
-			float: left;
-			width: 6em;
-			margin-right: 1em;
-			padding-top: .4em;
-			text-align: right;
-		}
+
 	}
-	input[type=submit] {
-		border: none;
-		@include respond-above(small) {
-			margin-left: 7em;
-		}
-	}
-	input[type=email],
-	input[type=text] {
-		border: 1px solid $grey;
-		padding: .5em;
-		@include respond-above(small) {
-			width: 17em;
-		}
-	}
-	textarea {
-		border: 1px solid $grey;
-		padding: .5em;
+	input {
 		width: 100%;
-		height: 7em;
-		@include respond-above(small) {
-			width: 17em;
-		}
-		@include respond-above(medium) {
-			width: 25em;
-		}
 	}
 }
 
 .commentlist {
 	list-style-type: none;
 	padding-left: 0;
-	max-width: 45em;
+	margin: 0;
+
 	.children {
 		list-style-type: none;
 		padding-left: 0;
 		.comment {
-			background-color: lighten( $grey, 17% );
-			padding: .5em;
-		}
-		.comment-content,
-		.reply {
-			padding-left: 0;
 		}
 	}
 	> .comment > .children {
 		padding-left: 46px;
 	}
+
+	#respond {
+		margin-bottom: gutter(12)*2;
+	}
 }
 
 .comment {
-	&:not(article) {
-		border-bottom: 1px solid $grey;
-		margin-bottom: 1em;
-	}
-	&:last-of-type {
-		border-bottom: 0;
-	}
+	margin-bottom: gutter(12)*2;
+	position: relative;
+
 	&-author {
+		@include responsive-text-size('deca');
+		font-family: 'Lato', sans-serif;
+		font-weight: bold;
 		display: inline-block;
-		margin-right: 1em;
-		line-height: 40px;
-		font-size: 1.3em;
 	}
 	.fn {
 		font-style: normal;
 	}
+
+	footer em {
+		color: $red;
+		padding: 15px;
+		position: absolute;
+		background: fade-out(#fff, 0.1);
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0%;
+		padding: 5px 15px 15px 15px;
+		text-align: center;
+	}
+
 	.avatar {
 		border-radius: 100%;
 		display: inline-block;
 		vertical-align: middle;
+		width: 50px;
+		float: left;
+		margin-right: 15px;
 	}
 	.says {
 		display: none;
 	}
 	&-meta {
-		margin-top: -1em;
-		margin-left: 46px;
-		font-size: .8em;
+		margin-top: -25px;
+		margin-left: 64px;
+
 		a {
-			color: #aaa;
+			color: $grey;
 		}
+
 		@include respond-above(small) {
-			margin-top: 0;
-			margin-left: 0;
-			line-height: 45px;
-			float: right;
+
 		}
 	}
 	&-content {
 
-		padding-left: 46px;
-		font-size: .8823529412em;
-		line-height: 1.4;
 	}
 	.reply {
-		padding-left: 46px;
-		margin-bottom: 1em;
+		@include responsive-text-size('deci');
 	}
 }
