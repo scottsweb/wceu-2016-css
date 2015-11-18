@@ -9,19 +9,28 @@ div.aligncenter {
 	margin: 5px auto 5px auto;
 }
 
-.alignright {
-	float:right;
-	margin: 5px 0 20px 20px;
+
+
+.alignleft,
+a img.alignleft {
+	width: 100%;
+	margin: 5px 30px 20px 0;
+	@include respond-above( 'medium' ) {
+		float: left;
+		width: auto;
+	}
+
 }
 
-.alignleft {
-	float: left;
-	margin: 5px 20px 20px 0;
-}
-
+.alignright,
 a img.alignright {
-	float: right;
-	margin: 5px 0 20px 20px;
+	width: 100%;
+	margin: 5px 0 20px 30px;
+
+	@include respond-above( 'medium' ) {
+		float: right;
+		width: auto;
+	}
 }
 
 
@@ -43,10 +52,6 @@ img.alignnone {
 	//min-width: 100%;
 }
 
-a img.alignleft {
-	float: left;
-	margin: 5px 20px 20px 0;
-}
 
 a img.aligncenter {
 	display: block;
