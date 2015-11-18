@@ -96,6 +96,14 @@ body {
 	}
 }
 
+// single post
+
+.single .post {
+	.entry-header {
+		margin-bottom: gutter(12) * 2;
+	}
+}
+
 .sharedaddy {
 	margin: ( gutter(12) * 2 ) 0;
 
@@ -162,6 +170,7 @@ body {
 		float: right;
 	}
 }
+
 // pages
 
 body.page {
@@ -204,6 +213,61 @@ body.page {
 		display: block;
 		position: relative;
 		top: -60px;
+	}
+}
+
+// attendees
+
+#tix-attendees .tix-columns-3 li {
+	width: 100%;
+}
+
+#tix-attendees {
+	@include clearfix();
+
+	.avatar {
+		border-radius: 50%;
+		float: none;
+		margin: 0 auto 10px;
+	}
+
+	.tix-attendee-name {
+		@include responsive-text-size('deca');
+		font-family: 'Lato', sans-serif;
+		font-weight: bold;
+	}
+
+	.tix-field {
+		margin-left: 0;
+		text-align: center;
+	}
+
+	.tix-attendee-list li {
+		margin-bottom: gutter(12)*2;
+		height: auto;
+
+		@include respond-above( 'medium' ) {
+			@include gallery(6 of 12);
+		}
+
+		@include respond-above( 'large' ) {
+			@include gallery(4 of 12);
+		}
+
+		@include respond-above( 'x-large' ) {
+			@include gallery(3 of 12);
+		}
+
+		p {
+			margin: 0;
+			line-height: 1.8;
+		}
+
+		.tix-attendee-url {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
 	}
 }
 
@@ -281,6 +345,11 @@ body.page {
 
 .tix-ticket-excerpt {
 	@include responsive-text-size('deci');
+	display: none;
+
+	@include respond-above( 'medium' ) {
+		display: block;
+	}
 }
 
 .tix-right input[type=email],
@@ -290,6 +359,17 @@ body.page {
 
 .tix_tickets_table th[colspan='2'] {
 	padding: 15px;
+}
+
+.tix_tickets_table .tix-column-per-ticket,
+.tix_tickets_table .tix-column-remaining {
+	width: 0px;
+	text-indent: -99999px;
+
+	@include respond-above( 'medium' ) {
+		width: auto;
+		text-indent: 0;
+	}
 }
 
 .tix_tickets_table td {

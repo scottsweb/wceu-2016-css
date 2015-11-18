@@ -187,8 +187,9 @@ This will form a list of social media buttons for WCEU
 
 <ul class="social-media">
 	<li class="twitter"><a href="https://twitter.com/WCEurope">Twitter</a></li>
-	<li class="facebook"><a href="#">Facebook</a></li>
-	<li class="email"><a href="/subscribe/">Email</a></li>
+	<li class="facebook"><a href="https://www.facebook.com/WordCampEurope/">Facebook</a></li>
+	<li class="googleplus"><a href="https://plus.google.com/111206512395258367886/posts">Google+</a></li>
+	<li class="email"><a href="/2016/subscribe/">Email</a></li>
 </ul>
 
 */
@@ -259,6 +260,16 @@ This will form a list of social media buttons for WCEU
 		}
 	}
 
+	.googleplus {
+		a {
+			background-color: #dd4b39;
+		}
+
+		a:before {
+			content: '\f218';
+		}
+	}
+
 	.email {
 		a {
 			background-color: #e9e9e9;
@@ -316,7 +327,7 @@ Add a custom menu to Footer Widget Area 3
 		text-indent: -99999px;
 		margin-bottom: gutter(12);
 		position: relative;
-		background-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20189%20189%22%3E%3Cstyle%20type%3D%22text/css%22%3E.logo-wordpress%7Bfill%3A%23fff%3B%7D%3C/style%3E%3Cpath%20class%3D%22logo-wordpress%22%20d%3D%22M94.5%200C42.4%200%200%2042.4%200%2094.5S42.4%20189%2094.5%20189%20189%20146.6%20189%2094.5%20146.6%200%2094.5%200zm-85%2094.5c0-12.3%202.6-24%207.4-34.6l40.5%20111C29.1%20157.2%209.5%20128.1%209.5%2094.5zm85%2085c-8.3%200-16.4-1.2-24-3.5L96%20101.9l26.1%2071.5.6%201.2c-8.8%203.2-18.3%204.9-28.2%204.9zm11.7-124.8c5.1-.3%209.7-.8%209.7-.8%204.6-.5%204-7.3-.5-7%200%200-13.8%201.1-22.6%201.1-8.3%200-22.4-1.1-22.4-1.1-4.6-.3-5.1%206.7-.5%207%200%200%204.3.5%208.9.8L92%2090.9l-18.6%2055.8-30.9-92c5.1-.3%209.7-.8%209.7-.8%204.6-.5%204-7.3-.5-7%200%200-13.8%201.1-22.6%201.1-1.6%200-3.5%200-5.5-.1%2015.2-23.1%2041.3-38.3%2071-38.3%2022.1%200%2042.3%208.5%2057.4%2022.3-.4%200-.7-.1-1.1-.1-8.3%200-14.3%207.3-14.3%2015.1%200%207%204%2012.9%208.3%2019.9%203.2%205.7%207%2012.9%207%2023.4%200%207.3-2.8%2015.7-6.5%2027.5l-8.5%2028.3-30.7-91.3zm62.9-1c6.6%2012.1%2010.4%2026%2010.4%2040.8%200%2031.3-17%2058.7-42.2%2073.4l26-75c4.8-12.1%206.5-21.8%206.5-30.4-.2-3.2-.4-6.1-.7-8.8z%22/%3E%3C/svg%3E');
+		background-image: url('https://europe.wordcamp.org/2016/files/2015/11/wordpress-footer-logo.png');
 		background-position: center;
 		background-repeat: no-repeat;
 		color: #fff;

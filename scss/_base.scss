@@ -89,6 +89,8 @@ blockquote {
 
 iframe {
 	width: 100%;
+	margin-top: gutter(12)/2;
+	margin-bottom: -5px;
 
 	@include respond-above( 'large' ) {
 		min-height: 450px;
@@ -106,7 +108,8 @@ input[type=submit] {
 }
 
 input[type=email],
-input[type=text] {
+input[type=text],
+#subscribe-email input {
 	border: 1px solid $blue;
 	padding: .5em;
 	width: 100%;
@@ -120,6 +123,12 @@ input[type=text] {
 
 	@include respond-above(small) {
 		width: 50%;
+	}
+}
+
+#subscribe-email input {
+	@include respond-above(small) {
+		width: 100%;
 	}
 }
 
@@ -144,6 +153,8 @@ table {
 	//border: 1px solid $green;
 	border-radius: 5px;
 	border: 1px solid $offwhite;
+	border-left: none;
+	border-right: none;
 
 	thead {
 		text-align: left;
