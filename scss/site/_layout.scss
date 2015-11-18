@@ -41,6 +41,16 @@ body {
 	padding-top: gutter(12) * 3;
 }
 
+.search-results,
+.archive,
+.single,
+.page {
+
+	#content {
+		padding-top: gutter(12) * 2;
+	}
+}
+
 // padding at smaller devices
 
 .main-navigation .menu,
@@ -58,7 +68,7 @@ body {
 
 .post {
 	.entry-title {
-		margin: 0 0 3px 0;
+		margin: 10px 0 3px 0;
 	}
 
 	.entry-meta {
@@ -118,7 +128,12 @@ body {
 	}
 }
 
-#nav-below {
+.sd-content ul {
+	margin-bottom: 0 !important;
+}
+
+#nav-above,
+.single #nav-below {
 	display: none;
 }
 
@@ -129,8 +144,13 @@ body {
 .blog {
 
 	.page-title {
-		margin-bottom: gutter(12) * 3;
+		margin-top: 0;
+		margin-bottom: gutter(12) * 2;
 		text-align: center;
+	}
+
+	.sharedaddy {
+		margin: gutter(12) 0 0 0;
 	}
 }
 
@@ -141,8 +161,8 @@ body {
 .search-results .post,
 .archive .post,
 .blog .post {
-	margin-bottom: gutter(12) * 3;
-	padding-bottom: gutter(12) * 3;
+	margin-bottom: gutter(12) * 2;
+	padding-bottom: gutter(12) * 2;
 	border-bottom: 1px solid $offwhite;
 
 	footer.entry-meta {
@@ -153,6 +173,10 @@ body {
 		border: none;
 		margin: 0;
 		padding: 0;
+	}
+
+	p:last-child {
+		margin-bottom: 0;
 	}
 
 	.wp-caption,
@@ -176,7 +200,8 @@ body {
 
 body.page {
 	.entry-title {
-		margin-bottom: gutter(12) * 3;
+		margin-top: 10px;
+		margin-bottom: gutter(12) * 2;
 		text-align: center;
 	}
 
