@@ -235,7 +235,7 @@ body.page {
 	}
 
 	img {
-		border-radius: 50%;
+		border-radius: 50% !important;
 		margin: 0 auto;
 		display: block;
 		position: relative;
@@ -253,7 +253,7 @@ body.page {
 	@include clearfix();
 
 	.avatar {
-		border-radius: 50%;
+		border-radius: 50% !important;
 		float: none;
 		margin: 0 auto 10px;
 	}
