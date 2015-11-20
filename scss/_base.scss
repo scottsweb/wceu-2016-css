@@ -17,7 +17,7 @@ a,
 a:visited {
 	color: $link-colour;
 	text-decoration: none;
-	transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+	transition: color 0.15s ease-in-out, background 0.15s ease-in-out;
 }
 
 a:hover,
@@ -34,6 +34,10 @@ a img {
 
 img {
 	@include img-fluid();
+}
+
+#main img {
+	border-radius: 15px;
 }
 
 // lists

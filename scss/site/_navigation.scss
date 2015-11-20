@@ -20,6 +20,7 @@
 	@include clearfix();
 	background: $green;
 	font-family: 'Lato', sans-serif;
+	-webkit-font-smoothing: antialiased;
 
 	a {
 		display: block;

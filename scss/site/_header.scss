@@ -65,6 +65,10 @@
 			padding-left: 80px;
 		}
 
+		&::first-letter {
+			letter-spacing: -3px;
+		}
+
 		&:before {
 			content: '';
 			position: absolute;

@@ -2,6 +2,7 @@
 // buttons
 
 @mixin button() {
+	transition: color 0.15s ease-in-out, background 0.15s ease-in-out;
 	display: inline-block;
 	border-radius: 30px;
 	background: $link-colour !important;
