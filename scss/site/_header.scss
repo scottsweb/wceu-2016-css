@@ -97,7 +97,7 @@
 	@include responsive-text-size('deca');
 	font-weight: 300;
 	margin: 0;
-	color: darken($offwhite, 30%);
+	color: $blue;
 
 	@include respond-above( 'large' ) {
 		padding-left: 80px;
