@@ -49,6 +49,10 @@
 	padding-top: 140px;
 	border-bottom: 2px solid $blue;
 
+	@media screen and ( min-width: 600px ) {
+		border: none;
+	}
+
 	@include respond-above( 'large' ) {
 		padding-top: 100px;
 		text-align: left;
