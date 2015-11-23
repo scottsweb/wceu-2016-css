@@ -11,6 +11,7 @@
 	top: 0;
 	bottom: auto;
 	z-index: 100;
+	border: none;
 }
 
 // shared
@@ -91,7 +92,8 @@
 // desktop navigation
 
 .main-navigation {
-	height: 60px;
+	border-top: 2px solid $blue;
+	height: 62px;
 
 	.assistive-text {
 		@include sr-only();

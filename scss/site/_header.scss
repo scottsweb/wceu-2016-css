@@ -22,6 +22,9 @@
 
 	#masthead hgroup {
 		height: 100%;
+		//background-image: url('http://wordcamp.w.dev/wp-content/uploads/sites/6/2015/11/illustration.png');
+		//background-position: center;
+		//background-repeat: no-repeat;
 	}
 
 }
@@ -44,6 +47,7 @@
 .site-header hgroup {
 	text-align: center;
 	padding-top: 140px;
+	border-bottom: 2px solid $blue;
 
 	@include respond-above( 'large' ) {
 		padding-top: 100px;
