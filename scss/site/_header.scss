@@ -6,8 +6,29 @@
 }
 
 #masthead hgroup {
-	background: $offwhite;
 	height: 260px;
+	background: $offwhite url('https://europe.wordcamp.org/2016/files/2015/11/illustration-scenery.png') center 30px repeat-x;
+
+	@media only screen and (min-resolution: 192dpi),
+	only screen and (min-resolution: 2dppx) {
+		background: $offwhite url('https://europe.wordcamp.org/2016/files/2015/11/illustration-scenery@2x.png') center 30px repeat-x;
+		background-size: 1183px 271px;
+	}
+
+	@include respond-above( 'large' ) {
+		background: $offwhite url('https://europe.wordcamp.org/2016/files/2015/11/home-illustration-mobile.png') right bottom no-repeat,
+					$offwhite url('https://europe.wordcamp.org/2016/files/2015/11/illustration-scenery.png') center 100px repeat-x;
+		background-size: auto, auto;
+		background-attachment: scroll, fixed;
+	}
+
+	@media only screen and ( min-width: 960px ) and (min-resolution: 192dpi),
+	only screen and ( min-width: 960px ) and (min-resolution: 2dppx) {
+		background: $offwhite url('https://europe.wordcamp.org/2016/files/2015/11/home-illustration-mobile@2x.png') right bottom no-repeat,
+					$offwhite url('https://europe.wordcamp.org/2016/files/2015/11/illustration-scenery@2x.png') left 50px repeat-x;
+		background-size: 640px 560px, 1183px 271px;
+		background-attachment: scroll, fixed;
+	}
 }
 
 // make it large on home
@@ -22,9 +43,32 @@
 
 	#masthead hgroup {
 		height: 100%;
-		//background-image: url('http://wordcamp.w.dev/wp-content/uploads/sites/6/2015/11/illustration.png');
-		//background-position: center;
-		//background-repeat: no-repeat;
+		background: $offwhite url('https://europe.wordcamp.org/2016/files/2015/11/home-illustration-mobile.png') center bottom no-repeat,
+					$offwhite url('https://europe.wordcamp.org/2016/files/2015/11/home-illustration-scenery-mobile.png') center bottom repeat-x;
+		background-size: auto, auto;
+		background-attachment: scroll, fixed;
+
+		@media only screen and (min-resolution: 192dpi),
+		only screen and (min-resolution: 2dppx) {
+			background: $offwhite url('https://europe.wordcamp.org/2016/files/2015/11/home-illustration-mobile@2x.png') center bottom no-repeat,
+						$offwhite url('https://europe.wordcamp.org/2016/files/2015/11/home-illustration-scenery-mobile@2x.png') center bottom repeat-x;
+			background-size: 640px 560px, 640px 560px;
+		}
+
+		@media screen and ( min-width: 600px ) {
+			background: $offwhite url('https://europe.wordcamp.org/2016/files/2015/11/home-illustration.png') center bottom no-repeat,
+						$offwhite url('https://europe.wordcamp.org/2016/files/2015/11/home-illustration-scenery.png') center bottom repeat-x;
+			background-size: auto, auto;
+			background-attachment: scroll, fixed;
+		}
+
+		@media only screen and ( min-width: 600px ) and (min-resolution: 192dpi),
+		only screen and ( min-width: 600px ) and (min-resolution: 2dppx) {
+			background: $offwhite url('https://europe.wordcamp.org/2016/files/2015/11/home-illustration@2x.png') center bottom no-repeat,
+						$offwhite url('https://europe.wordcamp.org/2016/files/2015/11/home-illustration-scenery@2x.png') center bottom repeat-x;
+			background-size: 1183px 560px, 1183px 560px;
+			background-attachment: scroll, fixed;
+		}
 	}
 
 }
@@ -196,21 +240,16 @@ Add the following HTML to After Header & After Header homepage
 .home .cta-widget {
 	left: 50%;
 	right: auto;
-	top: auto;
-	bottom: 30px;
+	top: 325px;
 	margin-left: -64px;
 	display: block;
 
 	@media screen and ( min-width: 600px ) {
-		bottom: 100px;
+		top: 350px;
 	}
 
 	@include respond-above( 'small' ) {
 		margin-left: -85px;
-	}
-
-	@include respond-above( 'large' ) {
-		bottom: 150px;
 	}
 
 	@include respond-above( 'x-large' ) {
