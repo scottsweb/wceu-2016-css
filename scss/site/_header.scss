@@ -29,6 +29,8 @@
 		background-size: 640px 560px, 1183px 271px;
 		background-attachment: scroll, fixed;
 	}
+
+
 }
 
 // make it large on home
@@ -48,12 +50,23 @@
 		background-size: auto, auto;
 		background-attachment: scroll, fixed;
 
+
+
 		@media only screen and (min-resolution: 192dpi),
 		only screen and (min-resolution: 2dppx) {
 			background: $offwhite url('https://europe.wordcamp.org/2016/files/2015/11/home-illustration-mobile@2x.png') center bottom no-repeat,
 						$offwhite url('https://europe.wordcamp.org/2016/files/2015/11/home-illustration-scenery-mobile@2x.png') center bottom repeat-x;
 			background-size: 640px 560px, 640px 560px;
 		}
+
+		@media only screen and (max-width: 720px) and (orientation: landscape),
+				only screen and (max-width: 720px) and (orientation: landscape) and (min-resolution: 192dpi),
+				only screen and (max-width: 720px) and (orientation: landscape) and (min-resolution: 2dppx)  {
+					background: $offwhite url('https://europe.wordcamp.org/2016/files/2015/11/illustration-scenery@2x.png') center 100% repeat-x;
+					background-size: 1183px 271px;
+		}
+
+
 
 		@media screen and ( min-width: 600px ) {
 			background: $offwhite url('https://europe.wordcamp.org/2016/files/2015/11/home-illustration.png') center bottom no-repeat,
@@ -219,6 +232,10 @@ Add the following HTML to After Header & After Header homepage
 	left: 50%;
 	margin-left: -56px;
 	display: none;
+
+	@media only screen and (max-width: 720px) and (orientation: landscape) {
+		display: none !important;
+	}
 
 	@include respond-above( 'large' ) {
 		top: 100px;
