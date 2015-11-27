@@ -12,7 +12,7 @@
     "node": ">= 0.10.0"
   },
   "devDependencies": {
-    "browser-sync": "^2.5.3",
+    "browser-sync": "^2.10.0",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.1.0",
     "gulp-check-unused-css": "^2.1.3",
