@@ -384,7 +384,9 @@ body.admin-bar #tix {
 }
 
 .tix-right input[type=email],
-.tix-right input[type=text] {
+.tix-right input[type=text],
+.tix-right input[type=url],
+.tix-right textarea {
 	width: 100%;
 }
 
