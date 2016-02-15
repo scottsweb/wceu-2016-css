@@ -111,6 +111,7 @@ input[type=submit] {
 	@include button();
 }
 
+#subscribe-email input,
 input[type=email],
 input[type=text],
 input[type=url],

@@ -221,12 +221,11 @@ Add the following HTML to After Header & After Header homepage
 
  */
 
-.cta-widget {
-	text-align: center;
+#after-header-widgets {
 	position: absolute;
-	top: 180px;
-	left: 50%;
-	margin-left: -56px;
+	top: 0px;
+	right: 20px;
+	height: 260px;
 	display: none;
 
 	@media only screen and (max-width: 720px) and (orientation: landscape) {
@@ -234,39 +233,87 @@ Add the following HTML to After Header & After Header homepage
 	}
 
 	@include respond-above( 'large' ) {
-		top: 100px;
-		right: 50px;
-		left: auto;
-		display: block;
+		display: table;
 	}
 
-	.button {
-		display: inline-block !important;
-		margin-bottom: gutter(12);
+	.widget {
+		display: table-row;
+		text-align: right;
+
+		> div,
+		> form {
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+
+	.jetpack_subscription_widget,
+	form {
+		position: relative;
+		padding: 0 20px;
+
+		#subscribe-submit {
+			position: absolute;
+			top: 0;
+			right: 0;
+			margin: 0;
+			padding: 0;
+		}
+
+		input[type='email'] {
+			border-top-right-radius: 30px;
+			border-bottom-right-radius: 30px;
+			min-width: 320px;
+			height: 36px;
+
+			@include respond-above( 'small' ) {
+				height: 44px;
+			}
+
+			@include respond-above( 'x-large' ) {
+				height: 48px;
+			}
+		}
 	}
 }
 
-.admin-bar .cta-widget {
-	top: 130px;
-}
-
-.home .cta-widget {
-	left: 50%;
+.home #after-header-widgets {
+	position: absolute;
+	top: 270px;
 	right: auto;
-	top: 325px;
-	margin-left: -64px;
+	width: 100%;
+	text-align: center;
+	height: auto;
 	display: block;
 
-	@media screen and ( min-width: 600px ) {
-		top: 350px;
+	@include respond-above( 'large' ) {
+		top: 325px;
 	}
 
-	@include respond-above( 'small' ) {
-		margin-left: -85px;
+	.widget {
+		margin: 0 auto;
+		padding: 0 10px 20px 0;
+		max-width: 400px;
+		display: block;
+
+		> div,
+		> form {
+			display: block;
+			text-align: center;
+		}
 	}
 
-	@include respond-above( 'x-large' ) {
-		margin-left: -90px;
+	.jetpack_subscription_widget,
+	form {
+		padding: 0;
+	}
+}
+
+.admin-bar.home #after-header-widgets {
+	top: 302px;
+
+	@include respond-above( 'large' ) {
+		top: 348px;
 	}
 }
 
@@ -292,6 +339,9 @@ Use the conditional display options in JetPack to apply different menus in diffe
 #after-header-widgets {
 	.widget_nav_menu {
 		@include container( breakpoint('large') );
+
+		// deprecated in favour of drop down menus, css is here in case we need it later
+		display: none;
 
 		.widget-title {
 			@include responsive-text-size('base');
