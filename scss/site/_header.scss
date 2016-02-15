@@ -247,8 +247,7 @@ Add the following HTML to After Header & After Header homepage
 		}
 	}
 
-	.jetpack_subscription_widget,
-	form {
+	.jetpack_subscription_widget form {
 		position: relative;
 		padding: 0 20px;
 
@@ -277,6 +276,10 @@ Add the following HTML to After Header & After Header homepage
 	}
 }
 
+.admin-bar #after-header-widgets {
+	top: 32px;
+}
+
 .home #after-header-widgets {
 	position: absolute;
 	top: 270px;
@@ -284,7 +287,7 @@ Add the following HTML to After Header & After Header homepage
 	width: 100%;
 	text-align: center;
 	height: auto;
-	display: block;
+	display: block !important;
 
 	@include respond-above( 'large' ) {
 		top: 325px;
@@ -303,14 +306,13 @@ Add the following HTML to After Header & After Header homepage
 		}
 	}
 
-	.jetpack_subscription_widget,
-	form {
+	.jetpack_subscription_widget form {
 		padding: 0;
 	}
 }
 
 .admin-bar.home #after-header-widgets {
-	top: 302px;
+	top: 326px;
 
 	@include respond-above( 'large' ) {
 		top: 348px;
