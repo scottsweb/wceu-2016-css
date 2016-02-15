@@ -262,7 +262,7 @@ Add the following HTML to After Header & After Header homepage
 		input[type='email'] {
 			border-top-right-radius: 30px;
 			border-bottom-right-radius: 30px;
-			min-width: 320px;
+			min-width: 350px;
 			height: 36px;
 
 			@include respond-above( 'small' ) {
@@ -308,6 +308,10 @@ Add the following HTML to After Header & After Header homepage
 
 	.jetpack_subscription_widget form {
 		padding: 0;
+
+		#subscribe-submit {
+			top: 0;
+		}
 	}
 }
 
