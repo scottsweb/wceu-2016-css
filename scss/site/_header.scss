@@ -3,6 +3,9 @@
 
 #masthead {
 	position: relative;
+	@media screen and ( min-width: 600px ) {
+		padding-top: 60px;
+	}
 }
 
 #masthead hgroup {
