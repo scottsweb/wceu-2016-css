@@ -263,12 +263,6 @@ Add the following HTML to After Header & After Header homepage
 			padding: 0;
 		}
 
-		@-moz-document url-prefix() {
-			#subscribe-submit {
-				top: 55px;
-			}
-		}
-
 		input[type='email'] {
 			border-top-right-radius: 30px;
 			border-bottom-right-radius: 30px;
@@ -283,6 +277,12 @@ Add the following HTML to After Header & After Header homepage
 				height: 48px;
 			}
 		}
+	}
+}
+
+@-moz-document url-prefix() {
+	.jetpack_subscription_widget form #subscribe-submit {
+		top: 55px;
 	}
 }
 
