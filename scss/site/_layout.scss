@@ -316,6 +316,10 @@ body.admin-bar #tix {
 
 		h3 {
 			display: none;
+
+			&:first-letter {
+				text-transform: capitalize;
+			}
 		}
 
 		.wcorg-sponsor-description p {
