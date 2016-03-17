@@ -310,16 +310,16 @@ body.admin-bar #tix {
 		@include clearfix();
 		text-align: center;
 		color: $green;
+
+		&:first-letter {
+			text-transform: capitalize;
+		}
 	}
 
 	.wcorg-sponsor {
 
 		h3 {
 			display: none;
-
-			&:first-letter {
-				text-transform: capitalize;
-			}
 		}
 
 		.wcorg-sponsor-description p {
