@@ -306,11 +306,11 @@ body.admin-bar #tix {
 
 .wcorg-sponsors {
 
-	.sponsor-description {
+	.wcorg-sponsor-description {
 		display: none;
 	}
 
-	.sponsor-level-title {
+	h2 {
 		@include clearfix();
 		text-align: center;
 		color: $green;
@@ -333,9 +333,9 @@ body.admin-bar #tix {
 		margin-bottom: gutter(12) * 3;
 
 		// large
-		&.administrator,
-		&.after-party,
-		&.super-admin {
+		&.wcorg-sponsor-level-administrator,
+		&.wcorg-sponsor-level-after-party,
+		&.wcorg-sponsor-level-super-admin {
 
 			.wcorg-sponsor {
 
@@ -350,9 +350,9 @@ body.admin-bar #tix {
 		}
 
 		// medium
-		&.speakers-dinner,
-		&.author,
-		&.editor {
+		&.wcorg-sponsor-level-speakers-dinner,
+		&.wcorg-sponsor-level-author,
+		&.wcorg-sponsor-level-editor {
 
 			.wcorg-sponsor {
 				@include span(6 of 12);
@@ -372,8 +372,8 @@ body.admin-bar #tix {
 		}
 
 		// small
-		&.subscriber,
-		&.small-business {
+		&.wcorg-sponsor-level-subscriber,
+		&.wcorg-sponsor-level-small-business {
 
 			.wcorg-sponsor {
 				@include span(4 of 12);
@@ -393,7 +393,7 @@ body.admin-bar #tix {
 		}
 
 		// tiny
-		&.microsponsor {
+		&.wcorg-sponsor-level-microsponsor {
 
 			.wcorg-sponsor {
 				@include span(3 of 12);
