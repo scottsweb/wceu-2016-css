@@ -304,7 +304,7 @@ body.admin-bar #tix {
 
 // sponsors
 
-.sponsors {
+.wcorg-sponsors {
 
 	.sponsor-description {
 		display: none;
@@ -316,7 +316,7 @@ body.admin-bar #tix {
 		color: $green;
 	}
 
-	.sponsor {
+	.wcorg-sponsor {
 
 		.entry-title {
 			margin: 0;
@@ -337,7 +337,7 @@ body.admin-bar #tix {
 		&.after-party,
 		&.super-admin {
 
-			.sponsor {
+			.wcorg-sponsor {
 
 				@include respond-above( 'small' ) {
 					@include span(4 of 12);
@@ -354,7 +354,7 @@ body.admin-bar #tix {
 		&.author,
 		&.editor {
 
-			.sponsor {
+			.wcorg-sponsor {
 				@include span(6 of 12);
 
 				&:nth-child(2n) {
@@ -375,7 +375,7 @@ body.admin-bar #tix {
 		&.subscriber,
 		&.small-business {
 
-			.sponsor {
+			.wcorg-sponsor {
 				@include span(4 of 12);
 
 				&:nth-child(3n) {
@@ -395,7 +395,7 @@ body.admin-bar #tix {
 		// tiny
 		&.microsponsor {
 
-			.sponsor {
+			.wcorg-sponsor {
 				@include span(3 of 12);
 
 				&:nth-child(4n) {
