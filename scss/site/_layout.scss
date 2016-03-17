@@ -441,6 +441,28 @@ body.admin-bar #tix {
 	}
 }
 
+// single sponsor
+
+.single-wcb_sponsor {
+
+	#main img {
+		border-radius: 0px;
+	}
+
+	.entry-title {
+		text-align: center;
+		position: relative;
+		top: -250px;
+	}
+
+	.wp-post-image {
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		top: 90px;
+	}
+}
+
 // contact form
 
 .contact-submit {
