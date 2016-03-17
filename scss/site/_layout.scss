@@ -302,6 +302,118 @@ body.admin-bar #tix {
 	padding-top: 0px;
 }
 
+// sponsors
+
+.sponsors {
+
+	.sponsor-description {
+		display: none;
+	}
+
+	.sponsor-level-title {
+		@include clearfix();
+		text-align: center;
+		color: $green;
+	}
+
+	.sponsor {
+
+		.entry-title {
+			margin: 0;
+			padding: 0;
+		}
+
+		img {
+			border-radius: 0 !important;
+		}
+	}
+
+	.sponsor-level {
+		@include clearfix();
+		margin-bottom: gutter(12) * 3;
+
+		// large
+		&.administrator,
+		&.after-party,
+		&.super-admin {
+
+			.sponsor {
+
+				@include respond-above( 'small' ) {
+					@include span(4 of 12);
+
+					&:nth-child(3n) {
+						@include last;
+					}
+				}
+			}
+		}
+
+		// medium
+		&.speakers-dinner,
+		&.author,
+		&.editor {
+
+			.sponsor {
+				@include span(6 of 12);
+
+				&:nth-child(2n) {
+					@include last;
+				}
+
+				@include respond-above( 'small' ) {
+					@include span(3 of 12);
+
+					&:nth-child(4n) {
+						@include last;
+					}
+				}
+			}
+		}
+
+		// small
+		&.subscriber,
+		&.small-business {
+
+			.sponsor {
+				@include span(4 of 12);
+
+				&:nth-child(3n) {
+					@include last;
+				}
+
+				@include respond-above( 'small' ) {
+					@include span(2 of 12);
+
+					&:nth-child(6n) {
+						@include last;
+					}
+				}
+			}
+		}
+
+		// tiny
+		&.microsponsor {
+
+			.sponsor {
+				@include span(3 of 12);
+
+				&:nth-child(4n) {
+					@include last;
+				}
+
+				@include respond-above( 'small' ) {
+					@include span(1 of 12);
+
+					&:nth-child(12n) {
+						@include last;
+					}
+				}
+			}
+		}
+	}
+}
+
 // contact form
 
 .contact-submit {
