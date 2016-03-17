@@ -306,10 +306,6 @@ body.admin-bar #tix {
 
 .wcorg-sponsors {
 
-	.wcorg-sponsor-description {
-		display: none;
-	}
-
 	h2 {
 		@include clearfix();
 		text-align: center;
@@ -318,9 +314,12 @@ body.admin-bar #tix {
 
 	.wcorg-sponsor {
 
-		.entry-title {
-			margin: 0;
-			padding: 0;
+		h3 {
+			display: none;
+		}
+
+		.wcorg-sponsor-description p {
+			display: none;
 		}
 
 		img {
@@ -328,86 +327,89 @@ body.admin-bar #tix {
 		}
 	}
 
-	.sponsor-level {
+	// large
+	.wcorg-sponsor-level-administrator,
+	.wcorg-sponsor-level-after-party,
+	.wcorg-sponsor-level-super-admin {
 		@include clearfix();
 		margin-bottom: gutter(12) * 3;
 
-		// large
-		&.wcorg-sponsor-level-administrator,
-		&.wcorg-sponsor-level-after-party,
-		&.wcorg-sponsor-level-super-admin {
+		.wcorg-sponsor {
 
-			.wcorg-sponsor {
-
-				@include respond-above( 'small' ) {
-					@include span(4 of 12);
-
-					&:nth-child(3n) {
-						@include last;
-					}
-				}
-			}
-		}
-
-		// medium
-		&.wcorg-sponsor-level-speakers-dinner,
-		&.wcorg-sponsor-level-author,
-		&.wcorg-sponsor-level-editor {
-
-			.wcorg-sponsor {
-				@include span(6 of 12);
-
-				&:nth-child(2n) {
-					@include last;
-				}
-
-				@include respond-above( 'small' ) {
-					@include span(3 of 12);
-
-					&:nth-child(4n) {
-						@include last;
-					}
-				}
-			}
-		}
-
-		// small
-		&.wcorg-sponsor-level-subscriber,
-		&.wcorg-sponsor-level-small-business {
-
-			.wcorg-sponsor {
+			@include respond-above( 'small' ) {
 				@include span(4 of 12);
 
 				&:nth-child(3n) {
 					@include last;
 				}
-
-				@include respond-above( 'small' ) {
-					@include span(2 of 12);
-
-					&:nth-child(6n) {
-						@include last;
-					}
-				}
 			}
 		}
+	}
 
-		// tiny
-		&.wcorg-sponsor-level-microsponsor {
+	// medium
+	.wcorg-sponsor-level-speakers-dinner,
+	.wcorg-sponsor-level-author,
+	.wcorg-sponsor-level-editor {
+		@include clearfix();
+		margin-bottom: gutter(12) * 3;
 
-			.wcorg-sponsor {
+		.wcorg-sponsor {
+			@include span(6 of 12);
+
+			&:nth-child(2n) {
+				@include last;
+			}
+
+			@include respond-above( 'small' ) {
 				@include span(3 of 12);
 
 				&:nth-child(4n) {
 					@include last;
 				}
+			}
+		}
+	}
 
-				@include respond-above( 'small' ) {
-					@include span(1 of 12);
+	// small
+	.wcorg-sponsor-level-subscriber,
+	.wcorg-sponsor-level-small-business {
+		@include clearfix();
+		margin-bottom: gutter(12) * 3;
 
-					&:nth-child(12n) {
-						@include last;
-					}
+		.wcorg-sponsor {
+			@include span(4 of 12);
+
+			&:nth-child(3n) {
+				@include last;
+			}
+
+			@include respond-above( 'small' ) {
+				@include span(2 of 12);
+
+				&:nth-child(6n) {
+					@include last;
+				}
+			}
+		}
+	}
+
+	// tiny
+	.wcorg-sponsor-level-microsponsor {
+		@include clearfix();
+		margin-bottom: gutter(12) * 3;
+
+		.wcorg-sponsor {
+			@include span(3 of 12);
+
+			&:nth-child(4n) {
+				@include last;
+			}
+
+			@include respond-above( 'small' ) {
+				@include span(1 of 12);
+
+				&:nth-child(12n) {
+					@include last;
 				}
 			}
 		}
