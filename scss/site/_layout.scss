@@ -309,6 +309,7 @@ body.admin-bar #tix {
 	h2 {
 		@include clearfix();
 		@include responsive-text-size('base');
+		margin-bottom: gutter(12) * 2;
 		text-align: center;
 		color: $green;
 		position: relative;
@@ -334,8 +335,6 @@ body.admin-bar #tix {
 		&:first-letter {
 			text-transform: capitalize;
 		}
-
-
 	}
 
 	.wcorg-sponsor {
