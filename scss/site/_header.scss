@@ -44,6 +44,10 @@
 		height: 100%;
 	}
 
+	#masthead {
+		min-height: 550px;
+	}
+
 	#masthead hgroup {
 		height: 100%;
 		background: $offwhite url('https://europe.wordcamp.org/2016/files/2015/11/home-illustration-mobile.png') center bottom no-repeat,
@@ -226,9 +230,9 @@ Add the following HTML to After Header & After Header homepage
 
 #after-header-widgets {
 	position: absolute;
-	top: 0px;
+	top: 50px;
 	right: 20px;
-	height: 260px;
+	height: 160px;
 	display: none;
 
 	@media only screen and (max-width: 720px) and (orientation: landscape) {
@@ -256,7 +260,7 @@ Add the following HTML to After Header & After Header homepage
 
 		#subscribe-submit {
 			position: absolute;
-			top: 49px;
+			top: 24px;
 			right: 0;
 			margin: 0;
 			padding: 0;
