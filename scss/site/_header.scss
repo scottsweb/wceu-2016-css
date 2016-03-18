@@ -289,15 +289,14 @@ Add the following HTML to After Header & After Header homepage
 
 .home #after-header-widgets {
 	position: absolute;
-	top: 270px;
+	top: 290px;
 	right: auto;
 	width: 100%;
 	text-align: center;
 	height: auto;
 	display: block !important;
-
-	@include respond-above( 'large' ) {
-		top: 325px;
+	@media screen and ( min-width: 600px ) {
+		top: 345px;
 	}
 
 	.widget {
@@ -323,10 +322,10 @@ Add the following HTML to After Header & After Header homepage
 }
 
 .admin-bar.home #after-header-widgets {
-	top: 326px;
+	top: 346px;
 
-	@include respond-above( 'large' ) {
-		top: 348px;
+	@media screen and ( min-width: 600px ) {
+		top: 377px;
 	}
 }
 
