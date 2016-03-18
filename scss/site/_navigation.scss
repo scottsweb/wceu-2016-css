@@ -122,15 +122,17 @@
 		display: table-row;
 		@include respond-above( 'x-large' ) {
 			// table-layout: fixed;
-			display: flex;
+			display: inline-flex;
 			justify-content: space-around;
+			align-content: stretch;
 		}
 		> li {
 			display: table-cell;
 			text-align: center;
 			position: relative;
 			@include respond-above( 'x-large' ) {
-				display: inline-block;
+				display: block;
+				width: 100%;
 			}
 			.sub-menu {
 				background: $offwhite;
@@ -232,6 +234,9 @@
 				}
 			}
 
+		}
+		.sub-menu li:last-child a {
+			border-radius: 0;
 		}
 	}
 	@media screen and ( min-width: 600px ) and ( max-width: 960px ) {
