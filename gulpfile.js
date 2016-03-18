@@ -147,7 +147,7 @@ gulp.task('styles', function() {
 		}))
 		.pipe(rename({suffix: '.min'}))
 		.pipe(sourcemaps.init())
-		.pipe(autoprefixer('last 2 versions', 'ie 8', 'ie 9'))
+		.pipe(autoprefixer({ browsers: ['last 2 versions', 'ie 8', 'ie 9'], flexbox: false } ) )
 		.pipe(csscomb())
 		.pipe(sourcemaps.write('./'))
 		.pipe(minifycss())
