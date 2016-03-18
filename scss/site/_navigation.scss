@@ -122,7 +122,7 @@
 		display: table-row;
 		@include respond-above( 'x-large' ) {
 			// table-layout: fixed;
-			display: inline-flex;
+			display: flex;
 			justify-content: space-around;
 			align-content: stretch;
 		}
