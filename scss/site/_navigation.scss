@@ -207,6 +207,7 @@
 		left: 0;
 		width: 100%;
 		z-index: 10;
+		font-size: 18px;
 		> a {
 			display: none;
 		}
@@ -239,7 +240,7 @@
 			border-radius: 0;
 		}
 	}
-	@media screen and ( min-width: 600px ) and ( max-width: 960px ) {
+	@media screen and ( min-width: 600px ) and ( max-width: 1050px ) {
 		.use-title-for-small a {
 			overflow: hidden;
 			text-indent: -9999px;
