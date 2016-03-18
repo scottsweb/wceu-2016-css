@@ -3,6 +3,9 @@
 
 #masthead {
 	position: relative;
+	@media screen and ( min-width: 600px ) {
+		padding-top: 60px;
+	}
 }
 
 #masthead hgroup {
@@ -25,7 +28,7 @@
 	@media only screen and ( min-width: 960px ) and (min-resolution: 192dpi),
 	only screen and ( min-width: 960px ) and (min-resolution: 2dppx) {
 		background: $offwhite url('https://europe.wordcamp.org/2016/files/2015/11/home-illustration-mobile@2x.png') right bottom no-repeat,
-					$offwhite url('https://europe.wordcamp.org/2016/files/2015/11/illustration-scenery@2x.png') left 50px repeat-x;
+					$offwhite url('https://europe.wordcamp.org/2016/files/2015/11/illustration-scenery@2x.png') left 100px repeat-x;
 		background-size: 640px 560px, 1183px 271px;
 		background-attachment: scroll, fixed;
 	}
@@ -42,7 +45,7 @@
 	}
 
 	#masthead {
-		min-height: 550px;
+		min-height: 610px;
 	}
 
 	#masthead hgroup {
@@ -227,7 +230,7 @@ Add the following HTML to After Header & After Header homepage
 
 #after-header-widgets {
 	position: absolute;
-	top: 50px;
+	top: 110px;
 	right: 20px;
 	height: 160px;
 	display: none;
@@ -281,20 +284,19 @@ Add the following HTML to After Header & After Header homepage
 }
 
 .admin-bar #after-header-widgets {
-	top: 32px;
+	top: 142px;
 }
 
 .home #after-header-widgets {
 	position: absolute;
-	top: 270px;
+	top: 290px;
 	right: auto;
 	width: 100%;
 	text-align: center;
 	height: auto;
 	display: block !important;
-
-	@include respond-above( 'large' ) {
-		top: 325px;
+	@media screen and ( min-width: 600px ) {
+		top: 345px;
 	}
 
 	.widget {
@@ -320,10 +322,10 @@ Add the following HTML to After Header & After Header homepage
 }
 
 .admin-bar.home #after-header-widgets {
-	top: 326px;
+	top: 346px;
 
-	@include respond-above( 'large' ) {
-		top: 348px;
+	@media screen and ( min-width: 600px ) {
+		top: 377px;
 	}
 }
 
