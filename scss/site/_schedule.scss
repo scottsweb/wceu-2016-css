@@ -1,0 +1,191 @@
+.wcpt-schedule {
+	table-layout: fixed;
+	.wcpt-session-speakers {
+		display: block;
+	}
+}
+
+.wcpt-col-time {
+	width: 120px;
+}
+
+.wcpt-col-track {
+	width: 33%;
+}
+
+@media only screen and (max-width:700px) {
+	.wcpt-schedule {
+		tr {
+			border-left: none;
+			border-right: none;
+			border-top: none;
+			border-color: #999;
+			&:nth-child(odd) {
+				background: white;
+			}
+		}
+		td {
+			padding: 0;
+			border-left: 1px solid #999;
+			border-right: 1px solid #999;
+		}
+		.wcpt-time {
+			padding: 8px 0;
+			border-left: none;
+			border-right: none;
+			border-bottom: 1px solid #999;
+			font-weight: bold;
+		}
+	}
+
+	.wcpt-session-type-session:before {
+		margin: 0;
+		padding: 10px;
+		border: none;
+		background: $offwhite;
+		color: $body-font-colour;
+		font-weight: bold;
+		font-size: 14px;
+	}
+	.wcpt-session-title {
+		padding: 10px;
+		font-size: 18px;
+		font-weight: bold;
+		// border-top: 1px solid #999;
+	}
+	.wcpt-session-speakers {
+		padding: 0 10px 14px 10px;
+	}
+	.wcpt-session-type-session {
+		margin-bottom: 0;
+	}
+	.wcpt-schedule .wcpt-session-empty {
+		display: none;
+		height: 0;
+	}
+}
+
+// // community
+// .wcb-session-tbd,
+// .wcb-session-empathy-and-acceptance-in-design-and-community,
+// .wcb-session-the-rebirth-of-the-italian-community,
+// .wcb-session-my-friend-the-impostor-syndrome,
+// .wcb-session-handling-anxiety,
+// .wcb-session-the-2016-plugin-directory,
+// .wcb-session-the-science-of-happiness,
+// .wcb-session-from-blogger-to-wordpress-core-committer
+// {
+// 	background: rgb(207,226,243);
+// }
+//
+// // development
+// .wcb-session-moving-forward-with-a-mature-platform,
+// .wcb-session-internationalizing-the-new-york-times,
+// .wcb-session-connected-wordpress,
+// .wcb-session-wordpress-hardening-ten-tips-in-ten-minutes,
+// .wcb-session-whats-new-in-php7-and-what-to-expect-in-php7-1,
+// .wcb-session-thinking-outside-the-boxmodel-an-introduction-to-flexbox,
+// .wcb-session-assistive-technology-demo,
+// .wcb-session-code-is-poetry-a-musicians-tale,
+// .wcb-session-wordpress-state-of-the-accessibility,
+// .wcb-session-the-ultimate-rest-api-dev-talk,
+// .wcb-session-the-swiss-knife-of-a-wordpress-developer,
+// .wcb-session-a-look-into-calypso,
+// .wcb-session-editing-text-at-the-new-york-times,
+// .wcb-session-seven-times-faster-a-study-in-frontend-optimization,
+// .wcb-session-tba-2,
+// .wcb-session-using-the-rest-api-and-javascript-to-create-better-wordpress-interfaces,
+// .wcb-session-open-source-project-management-at-scale-how-1300-people-improved-drupal-8s-multilingual-features,
+// .wcb-session-modernizing-wordpress-search-with-elasticsearch,
+// .wcb-session-using-composer-to-create-manageable-wordpress-websites,
+// .wcb-session-my-condolences-youre-now-the-maintainer-of-a-popular-open-source-project
+// {
+// 	background: rgb(234,209,220);
+// }
+//
+// // design
+// .wcb-session-making-ads-great-again,
+// .wcb-session-art-directed-web-typography,
+// .wcb-session-moving-the-design-process-to-the-browser,
+// .wcb-session-forefront-a-new-front-end-experience,
+// .wcb-session-caring-is-the-coolest-thing-ive-ever-seen-anyone-do-thoughts-on-wordpress-plugin-ui
+// {
+// 	background: rgb(217,210,233);
+// }
+//
+//
+// // business
+// .wcb-session-cultivating-happy-teams-for-better-business-panel,
+// .wcb-session-how-newscorp-australia-scaled-wordpress-to-host-australias-largest-news-websites-on-wordpress-vip,
+// .wcb-session-proudly-powered-by-the-wordpress-rest-api,
+// .wcb-session-remote-is-the-new-black-to-be-changed,
+// .wcb-session-reviews-the-good-the-bad-and-the-stalker,
+// .wcb-session-closing-the-gap-developing-your-support-philosophy,
+// .wcb-session-zen-and-the-art-of-online-communication,
+// .wcb-session-the-making-of-calypso-a-team-perspective,
+// .wcb-session-unsafe-harbors-data-protection-strikes-back,
+// .wcb-session-the-discovery-definition-approach-to-project-planning,
+// .wcb-session-dealing-with-different-client-cultures
+// {
+// 	background: rgb(217,234,211);
+// }
+//
+//
+//
+// // content
+// .wcb-session-your-content-is-trapped-how-a-proper-content-architecture-can-save-it,
+// .wcb-session-publish-in-10-minutes-per-day,
+// .wcb-session-beyond-seo-copywriting-for-professionals
+// {
+// 	background: rgb(230,184,175);
+// }
+//
+//
+// // breaks
+// .wcb-session-morning-break,
+// .wcb-session-lunch,
+// .wcb-session-afternoon-break,
+// .wcb-session-break,
+// .wcb-session-lunch-2,
+// .wcb-session-break-2
+// {
+// 	background: rgb(204,204,204);
+// }
+//
+//
+// // unconference?
+// .wcb-session-unconference
+// {
+//
+// }
+//
+// // open/close
+// .wcb-session-opening-remarks,
+// .wcb-session-opening-remarks-2,
+// .wcb-session-closing-remarks,
+// .wcb-session-closing-remarks-2
+// {
+// 	background: rgb(252,229,205);
+// }
+//
+// // uncategorized
+// .wcb-session-wp-cli-for-beginners,
+// .wcb-session-multisite,
+// .wcb-session-theming-in-wordpress-where-do-i-start,
+// .wcb-session-website-security-the-big-picture-w-simple-steps-to-take,
+// .wcb-session-lets-write-a-plugin-demystifying-the-art-and-science-of-plugin-development,
+// .wcb-session-the-ultimate-wordpress-development-environment,
+// .wcb-session-matt,
+// .wcb-session-qa-streaming,
+// .wcb-session-keys-to-growing-developing-your-wordpress-meetup,
+// .wcb-session-contributing-to-wordpress-for-business-profession-the-community,
+// .wcb-session-managing-a-local-wordpress-community,
+// .wcb-session-japanese-wordpress-community,
+// .wcb-session-whats-my-wordpress-sites-email-strategy,
+// .wcb-session-making-the-leap-successful-products-as-a-web-agency,
+// .wcb-session-project-management-or-how-to-herd-cats,
+// .wcb-session-managing-a-remote-wordpress-team,
+// .wcb-session-changing-the-world-one-wordpress-site-at-a-time-how-we-built-a-successful-distributed-wordpress-firm-serving-nonprofits
+// {
+//
+// }
