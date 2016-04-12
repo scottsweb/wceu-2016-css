@@ -3,17 +3,54 @@
 	.wcpt-session-speakers {
 		display: block;
 	}
+	tr {
+		line-height: 1.4;
+	}
 }
 
-.wcpt-col-time {
-	width: 120px;
+@media only screen and (min-width:701px) {
+
+	.wcpt-col-time {
+		width: 90px;
+		border-right: 1px solid $offwhite;
+		tr:nth-of-type( odd ) & {
+			border-color: white;
+		}
+	}
+
+	.wcpt-time {
+		border-right: 1px solid $offwhite;
+		tr:nth-of-type( odd ) & {
+			border-color: white;
+		}
+	}
+
+	.wcpt-session-type-session,
+	.wcpt-session-empty {
+		border-right: 1px solid $offwhite;
+		tr:nth-of-type( odd ) & {
+			border-color: white;
+		}
+	}
+
+	.wcpt-col-track {
+		width: 33%;
+	}
+
 }
 
-.wcpt-col-track {
-	width: 33%;
+.wcpt-session-title {
+	display: block;
+	font-size: 16px;
+	line-height: 1.6;
+	padding-bottom: 6px;
+	.global-session & {
+		padding-bottom: 0;
+	}
 }
 
 .wcpt-session-speakers {
+	font-size: 15px;
 	a {
 		color: $body-font-colour;
 		font-style: italic;
