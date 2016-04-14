@@ -75,7 +75,8 @@ Now using the standard sponsor widget as we have not been supplied SVGs
 
 		// large
 		&.administrator,
-		&.super-admin {
+		&.super-admin,
+		&.after-party {
 
 			.sponsor-logo {
 
@@ -89,10 +90,17 @@ Now using the standard sponsor widget as we have not been supplied SVGs
 			}
 		}
 
+		&.after-party {
+			.sponsor-logo {
+				@include respond-above( 'small' ) {
+					@include push(2 of 12);
+				}
+			}
+		}
+
 		// medium
-		&.speakers-dinner,
-		&.after-party,
-		&.editor {
+		&.editor,
+		&.author {
 
 			.sponsor-logo {
 				@include span(6 of 12);
@@ -115,18 +123,9 @@ Now using the standard sponsor widget as we have not been supplied SVGs
 			}
 		}
 
-		&.after-party {
-			.sponsor-logo {
-				@include respond-above( 'small' ) {
-					@include push(3 of 12);
-				}
-			}
-		}
-
 		// small
 		&.subscriber,
-		&.small-business,
-		&.author {
+		&.small-business {
 
 			> .sponsor-logo {
 				@include span(4 of 12);
