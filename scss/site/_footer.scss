@@ -99,14 +99,14 @@ Now using the standard sponsor widget as we have not been supplied SVGs
 				@include span(6 of 12);
 
 				&:nth-child(2n) {
-					@include last;
+					//@include last;
 				}
 
 				@include respond-above( 'small' ) {
 					@include span(3 of 12);
 
 					&:nth-child(4n) {
-						@include last;
+						//@include last;
 					}
 				}
 			}
@@ -121,14 +121,14 @@ Now using the standard sponsor widget as we have not been supplied SVGs
 				@include span(4 of 12);
 
 				&:nth-child(3n) {
-					@include last;
+					//@include last;
 				}
 
 				@include respond-above( 'small' ) {
 					@include span(2 of 12);
 
 					&:nth-child(6n) {
-						@include last;
+						//@include last;
 					}
 				}
 			}
