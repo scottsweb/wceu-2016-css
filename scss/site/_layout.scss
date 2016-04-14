@@ -245,6 +245,24 @@ body.page {
 	}
 }
 
+// single speaker
+
+.single-wcb_speaker {
+	h2 {
+		position: relative;
+		top: 120px;
+		text-align: center;
+	}
+
+	img {
+		border-radius: 50% !important;
+		margin: 0 auto;
+		display: block;
+		position: relative;
+		top: -60px;
+	}
+}
+
 // attendees
 
 #tix-attendees .tix-columns-3 li {
