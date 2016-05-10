@@ -113,6 +113,7 @@
 }
 
 .wcpt-session-type-session {
+	@include clearfix;
 	.wcpt-session-speakers:after {
 		position: relative;
 		right: -6px;
@@ -122,6 +123,9 @@
 		padding: 2px 6px;
 		border-radius: 16px;
 		font-weight: bold;
+		@media only screen and (max-width:700px) {
+			margin-bottom: 6px;
+		}
 	}
 }
 
