@@ -317,3 +317,18 @@
 		border: 2px solid #E32D88;
 	}
 }
+
+// Hack track title. TinyMCE strips data attributes.
+@media screen and ( max-width: 700px ) {
+	.wcpt-schedule .wcpt-session-type-session {
+		&.wcb-track-track-1:before {
+			content: 'Track 1 - Halle E';
+		}
+		&.wcb-track-track-2:before {
+			content: 'Track 2 - Halle G';
+		}
+		&.wcb-track-track-3:before {
+			content: 'Track 3 - Leopold';
+		}
+	}
+}
