@@ -2,7 +2,7 @@
 
 # WordCamp Europe CSS 2016
 
-* Status: ✔ Active
+* Status: ✖ Inactive
 * Contributors: [@scottsweb](http://twitter.com/scottsweb)
 * Description: Custom CSS for the WordCamp Europe 2016 theme.
 * Author: [Scott Evans](http://scott.ee)
@@ -28,7 +28,9 @@ Make sure you have `node` and `npm` [installed](https://nodejs.org/en/). Navigat
 
 If your site is running on a local domain (e.g. `local.wp.dev`) then you can add this to line: 35 of `gulpfile.js`. Any CSS changes will then be automatically refreshed in your browser.
 
-CSS generated from this plugin (`css/styles.min.css`) needs to be manually copy and pasted into the `Appearance -> Edit CSS` screen on the live WordCamp site.
+~~CSS generated from this plugin (`css/styles.min.css`) needs to be manually copy and pasted into the `Appearance -> Edit CSS` screen on the live WordCamp site.~~
+
+Upon commiting to master a webhook lets WordCamp central know that a change has been made. The site CSS will then update automatically. 
 
 ## Frequently Asked Questions
 
