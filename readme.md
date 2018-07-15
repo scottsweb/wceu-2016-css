@@ -1,4 +1,4 @@
-![WordCamp Europe CSS 2016](http://cloud.scott.ee/images/wceu-2016-css.png)
+![WordCamp Europe CSS 2016](https://scott.ee/images/wceu-2016-css.png)
 
 # WordCamp Europe CSS 2016
 
